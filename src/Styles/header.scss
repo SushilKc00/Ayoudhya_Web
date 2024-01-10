@@ -1,8 +1,7 @@
 header{
      width: 100%;
      transition: all 0.6s;
-     background-color: transparent;
-     color: white;
+    //  color: rgb(255, 255, 255);
     nav{
       width: 75%;
       margin: 0 auto;
@@ -35,7 +34,6 @@ header{
                 font-size: 1.5rem;
                 font-weight: 900;
                 text-transform: uppercase;
-                // color: white;
                 letter-spacing: 0.2rem;
             }
             @media screen and (max-width:900px){
@@ -47,6 +45,7 @@ header{
           background-color: white;
           border-radius: 4px;
           padding: 0.5rem;
+          color: black;
           @media screen and (max-width:900px){
              display: block;
           }
@@ -64,6 +63,7 @@ header{
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      z-index: 50;
       li{
         font-size: 1.5rem;
         font-weight: 900;

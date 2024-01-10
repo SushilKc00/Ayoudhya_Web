@@ -1,6 +1,7 @@
 @import "./header.scss";
 @import "./home.scss";
 @import "./footer.scss";
+@import "./about.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,4 +15,9 @@
 html,body{
   font-size: 64.5%;
   font-family: "Lato";
+  scroll-behavior: smooth;
+}
+
+.bg_salmon{
+    overflow-y: hidden;
 }

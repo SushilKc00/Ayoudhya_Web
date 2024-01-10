@@ -7,12 +7,12 @@ import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { MdMenu } from "react-icons/md";
 import { MobileNav } from "./MobileNav";
 
-export const Header = () => {
+export const Header = ({ Color }) => {
   const [changeHeaderStyle, setChagneHeaderStyle] = useState(false);
   const [hamMenu, setHamMenu] = useState(false);
 
   const scrollHeaderStyling = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 400) {
       setChagneHeaderStyle(true);
     } else {
       setChagneHeaderStyle(false);
@@ -30,7 +30,7 @@ export const Header = () => {
         background: changeHeaderStyle ? "white" : "",
         position: changeHeaderStyle ? "fixed " : "",
         top: 0,
-        color: changeHeaderStyle ? "black" : "",
+        color: changeHeaderStyle ? "black" : Color,
       }}
     >
       <nav>
@@ -57,7 +57,16 @@ export const Header = () => {
             {Nav_Links.map((links) => {
               return (
                 <li className="flex items-center gap-3">
-                  <NavLink to={links.src}>{links.linkName}</NavLink>
+                  <NavLink
+                    to={links.src}
+                    style={({ isActive }) => {
+                      return {
+                        borderBottom: isActive ? "4px solid #DEB666" : "",
+                      };
+                    }}
+                  >
+                    {links.linkName}
+                  </NavLink>
                   {/* <IoIosArrowDown size={12} /> */}
                 </li>
               );
