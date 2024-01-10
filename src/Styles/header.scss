@@ -1,0 +1,73 @@
+header{
+     width: 100%;
+     transition: all 0.6s;
+     background-color: transparent;
+     color: white;
+    nav{
+      width: 75%;
+      margin: 0 auto;
+      padding: 1rem 0;
+      @media screen and (max-width:1160px){
+        width:100%;
+        padding: 1rem 1.2rem;
+      }
+      .upper_div{
+         >div{
+            a{
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+         }
+      } 
+      .lower_div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            img{
+                width: 100%;
+            }
+        }
+        ul{
+            display: flex;
+            gap: 3rem;
+            li{
+                font-size: 1.5rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                // color: white;
+                letter-spacing: 0.2rem;
+            }
+            @media screen and (max-width:900px){
+                display: none;
+              }
+        }
+        .ham_burger_menu{
+          display: none;
+          background-color: white;
+          border-radius: 4px;
+          padding: 0.5rem;
+          @media screen and (max-width:900px){
+             display: block;
+          }
+        }
+      }
+    }
+    .mobile_nav{
+      width: 300px;
+      height: 100vh;
+      position: fixed;
+      background-color: rgb(255, 255, 255);
+      right: 0;
+      top: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      li{
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: rgb(101, 101, 101);
+      }
+    }
+}

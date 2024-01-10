@@ -1,4 +1,17 @@
 @import "./header.scss";
+@import "./home.scss";
+@import "./footer.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+  font-size: 64.5%;
+  font-family: "Lato";
+}

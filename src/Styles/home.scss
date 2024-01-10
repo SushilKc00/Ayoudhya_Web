@@ -1,0 +1,25 @@
+.welcome_section{
+    .welcome_container{
+        width: 100%;
+        min-height: 100vh;
+        background-image: url("https://rukminim2.flixcart.com/image/850/1000/jhmawsw0/poster/q/k/h/large-ps86-beach-resort-suns-wall-decor-poster-home-decor-original-imaf5kmemzdcdfye.jpeg?q=90");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding-bottom: 2rem;
+    }
+}
+.service_section{
+     background-color: #F5F5F5;
+     padding: 5rem 0;
+     .service_container{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        @media (max-width:1024px) {
+             width: 100%;
+             padding: 0 2rem;
+        }
+     }
+}
