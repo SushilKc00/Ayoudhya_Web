@@ -7,7 +7,7 @@ import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { MdMenu } from "react-icons/md";
 import { MobileNav } from "./MobileNav";
 
-export const Header = () => {
+export const Header = (props) => {
   const [changeHeaderStyle, setChagneHeaderStyle] = useState(false);
   const [hamMenu, setHamMenu] = useState(false);
 
@@ -51,7 +51,7 @@ export const Header = () => {
 
         <div className="lower_div">
           <div className="logo">
-            <img src={headerLogo} alt="header_logo" />
+            <img src={headerLogo} alt="header_logo" style={{width:"7rem",height:"7rem"}}/>
           </div>
           <ul>
             {Nav_Links.map((links) => {

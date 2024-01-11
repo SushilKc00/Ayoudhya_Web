@@ -9,7 +9,7 @@ export const Home = () => {
     <div>
       <section className="welcome_section">
         <div className="welcome_container">
-          <Header />
+          <Header color="black"/>
           <div className="lg:flex gap-3 px-5 xl:w-[75%] m-auto mt-8">
             <div className="lg:w-[80%]">
               <h2 className="sm:text-6xl text-4xl text-white font-semibold leading-snug">
