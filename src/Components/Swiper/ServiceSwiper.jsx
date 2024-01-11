@@ -35,8 +35,7 @@ export const ServiceSwiper = ({ i }) => {
         // pagination={true}
         modules={[EffectCube, Pagination, Autoplay]}
         onSlideChange={(i) => {
-          console.log(i);
-          setSlideIndexValue(i.activeIndex);
+          setSlideIndexValue(i.realIndex);
         }}
       >
         {serviceImages.map((i) => (

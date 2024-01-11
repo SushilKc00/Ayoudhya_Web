@@ -2,13 +2,19 @@ import React from "react";
 import { Header } from "../../Components/Header/Header";
 import aboutimg1 from "../../assets/aboutimg1.png";
 import useScrollTop from "../../Components/useScrollTop";
+import aboutBackgroundImage from "../../assets/videoimg.jpg";
 
 export const About = () => {
   useScrollTop();
   return (
     <div className="about_section">
       <Header Color={"black"} />
-      <div className="paralax_container">
+      <div
+        className="paralax_container"
+        style={{
+          backgroundImage: `url(${aboutBackgroundImage})`,
+        }}
+      >
         <h2 className="text-white text-5xl">About Awadh Vilas</h2>
       </div>
       <div className="about_content">

@@ -18,6 +18,8 @@ import newsimg1 from "../../assets/newsimg1.png";
 import { ServiceSwiper } from "../../Components/Swiper/ServiceSwiper";
 import { useServiceHook } from "../../Context/ServiceContextProvider";
 import useScrollTop from "../../Components/useScrollTop";
+import ayodhyaBackgrounImg from "../../assets/ayodhya.png";
+import videoImg from "../../assets/videoimg.jpg";
 
 const templeImages = [
   {
@@ -107,13 +109,17 @@ export const Home = () => {
   const [playVideo, SetPlayVideo] = useState(false);
   const { slideIndexValue } = useServiceHook();
 
-  // useScrollTop();
-
+  useScrollTop();
   return (
     <div>
       {/* WELCOME SECTION....... */}
       <section className="welcome_section">
-        <div className="welcome_container">
+        <div
+          className="welcome_container"
+          style={{
+            backgroundImage: `url(${ayodhyaBackgrounImg})`,
+          }}
+        >
           <Header Color={"white"} />
           <div className="lg:flex gap-3 px-5 xl:w-[75%] m-auto mt-28">
             <div className="lg:w-[80%]">
@@ -405,7 +411,12 @@ export const Home = () => {
 
       {/* VIDEO SECTION.... */}
       <section className="video_section">
-        <div className="video_preview">
+        <div
+          className="video_preview"
+          style={{
+            backgroundImage: `url(${videoImg})`,
+          }}
+        >
           <div
             className="cursor-pointer text-gray-200 hover:scale-125 transition-all"
             onClick={() => {
