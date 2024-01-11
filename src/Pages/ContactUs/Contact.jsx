@@ -1,21 +1,44 @@
 import React from "react";
-import { Header } from "../../Components/Header/Header";
-import useScrollTop from "../../Components/useScrollTop";
 import "./contact.css";
+import { FaFacebookF } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
+import { FaTwitter } from "react-icons/fa";
+import { Header } from "../../Components/Header/Header";
+import ContactInfo from "../../Components/contact-info/ContactInfo";
+import Call from "../../assets/svg/call-chat-rounded-svgrepo-com.svg";
+import Mail from "../../assets/svg/email-svgrepo-com.svg";
+import Web from "../../assets/svg/browser-web-internet-network-svgrepo-com.svg";
+import Location from "../../assets/svg/map-location-svgrepo-com.svg";
+import { Link } from "react-router-dom";
+import useScrollTop from "../../Components/useScrollTop";
+
 export const Contact = () => {
   const data = [
     {
       title: `address`,
       description: `PNB Road Near Maniramdas Chhawani Chhoti Chhawani Ayodhya, Uttar Pradesh 224123`,
+      icon: Location,
     },
-    { title: `email`, description: `contact@hotelawadhvilasayodhya.com` },
-    { title: `web`, description: `hotelawadhvilasayodhya.com` },
-    { title: `phone`, description: `+91 9120053008` },
+    {
+      title: `email`,
+      description: `contact@hotelawadhvilasayodhya.com`,
+      icon: Mail,
+    },
+    { title: `web`, description: `hotelawadhvilasayodhya.com`, icon: Web },
+    { title: `phone`, description: `+91 9120053008`, icon: Call },
+  ];
+
+  const social = [
+    { icon: <FaFacebookF />, link: "#", title: "facebook" },
+    { icon: <FaInstagram />, link: "#", title: "instagram" },
+    { icon: <CiLinkedin />, link: "#", title: "linkedin" },
+    { icon: <FaTwitter />, link: "#", title: "twitter" },
   ];
   useScrollTop();
   return (
-    <div>
-      <Header Color={"black"} />
+    <div className="bg-gray-200 contact-page">
+      <Header Color="bg-white" />
       <main>
         <section className="map">
           <div>
@@ -128,9 +151,9 @@ export const Contact = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-5 flex lg:content-end md:content-start sm:content-center  lg:mr-2">
+                <div className="mt-5 flex lg:justify-end md:justify-start lg:mr-2">
                   <button
-                    className="py-3 px-6 uppercase text-lg font-semibold bg-yellow-500 text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
+                    className="py-3 lg:w-max w-[100%] md:w-max px-6 uppercase text-lg font-semibold bg-yellow-500 text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
                     onClick={() => {
                       event.preventDefault();
                     }}
@@ -147,19 +170,26 @@ export const Contact = () => {
                   get in touch
                 </h2>
               </div>
-              {data.map((item, i) => (
-                <div
-                  className="flex flex-col pt-2 pb-2 gap-3 items-start self-stretch lg:mt-5 md:mt-4 sm:mt-2"
-                  key={i}
-                >
-                  <h3 className="contact-fs-15 text-clr-yellow  uppercase font-black">
-                    {item.title}:
-                  </h3>
-                  <p className="contact-fs-15 text-clr-gray-dark font-bold ">
-                    {item.description}
-                  </p>
-                </div>
+              {data.map((item, index) => (
+                <ContactInfo
+                  key={index}
+                  title={item.title}
+                  description={item.description}
+                  icon={item.icon}
+                />
               ))}
+              <div className="social-icon flex mt-4">
+                {social.map((item, i) => (
+                  <Link
+                    to={item.link}
+                    key={i}
+                    className="rounded-se-sm flex items-center justify-center text-3xl leading-10 m-1 bg-white border border-solid border-slate-300 h-14 w-14 text-blue-700 hover:text-gray-100 hover:bg-blue-700"
+                  >
+                    <span className="sr-only">{item.title}</span>
+                    {item.icon}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

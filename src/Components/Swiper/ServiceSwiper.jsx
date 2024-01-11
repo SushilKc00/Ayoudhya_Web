@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-import { EffectCube, Pagination } from "swiper/modules";
+import { EffectCube, Pagination, Autoplay } from "swiper/modules";
 
 import serviceimg1 from "../../assets/serviceimg1.png";
 import serviceimg2 from "../../assets/serviceimg2.png";
@@ -20,6 +20,11 @@ export const ServiceSwiper = ({ i }) => {
     <div>
       <Swiper
         effect={"cube"}
+        loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         grabCursor={true}
         cubeEffect={{
           shadow: true,
@@ -28,7 +33,7 @@ export const ServiceSwiper = ({ i }) => {
           shadowScale: 0.94,
         }}
         // pagination={true}
-        modules={[EffectCube, Pagination]}
+        modules={[EffectCube, Pagination, Autoplay]}
         onSlideChange={(i) => {
           console.log(i);
           setSlideIndexValue(i.activeIndex);
