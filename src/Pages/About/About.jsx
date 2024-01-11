@@ -1,6 +1,8 @@
 import React from "react";
 import { Header } from "../../Components/Header/Header";
 import aboutimg1 from "../../assets/aboutimg1.png";
+import Number from "../../Components/Number";
+
 
 export const About = () => {
   return (
@@ -46,20 +48,20 @@ export const About = () => {
             <img src={aboutimg1} alt="" className="w-full" />
             <div className="flex justify-center gap-10 mt-8">
               <div className="detail_card">
-                <span>180</span>
-                <p>Rooms</p>
+                <span><Number n={1500}/>+</span>
+                <p className="capitalize">booking month</p>
               </div>
               <div className="detail_card">
-                <span>18</span>
-                <p>Resturant</p>
+              <span><Number n={300}/>+</span>
+                <p className="capitalize">visitors daily</p>
               </div>
               <div className="detail_card">
-                <span>180</span>
-                <p>Rooms</p>
+              <span><Number n={95}/>%</span>
+                <p className="capitalize">positive feedback</p>
               </div>
               <div className="detail_card">
-                <span>180</span>
-                <p>Rooms</p>
+              <span><Number n={50}/>+</span>
+                <p className="capitalize">Awards & honors</p>
               </div>
             </div>
           </div>

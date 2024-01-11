@@ -63,9 +63,9 @@ const ContactInfo = ({ title, description, icon }) => {
             height={30}
             alt={title}
             className="text-3xl "
-            style={{
-              filter: "brightness(0) invert(1)",
-            }}
+            // style={{
+            //   filter: "brightness(0) invert(1)",
+            // }}
           />
         </div>
         <div>
