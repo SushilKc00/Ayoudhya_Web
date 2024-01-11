@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../../Components/Header/Header";
 import { CiStar } from "react-icons/ci";
 import { BsCheck2Square } from "react-icons/bs";
-import { AiOutlineLineChart } from "react-icons/ai";
+import { AiOutlineLineChart, AiOutlineMail } from "react-icons/ai";
+import { CiLocationOn } from "react-icons/ci";
+import { GiRotaryPhone } from "react-icons/gi";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { RoomsCards } from "../../Components/Cards/RoomsCards";
 import { Link } from "react-router-dom";
@@ -105,7 +107,7 @@ export const Home = () => {
   const [playVideo, SetPlayVideo] = useState(false);
   const { slideIndexValue } = useServiceHook();
 
-  useScrollTop();
+  // useScrollTop();
 
   return (
     <div>
@@ -113,7 +115,7 @@ export const Home = () => {
       <section className="welcome_section">
         <div className="welcome_container">
           <Header Color={"white"} />
-          <div className="lg:flex gap-3 px-5 xl:w-[75%] m-auto mt-8">
+          <div className="lg:flex gap-3 px-5 xl:w-[75%] m-auto mt-28">
             <div className="lg:w-[80%]">
               <h2 className="sm:text-6xl text-4xl text-white font-semibold leading-snug">
                 Welcome to Hotel Awadh Vilas & Restaurant
@@ -281,7 +283,7 @@ export const Home = () => {
       <section className="rooms_section">
         <div className="favorite_rooms">
           <h2 className="md:text-5xl text-3xl text-center font-bold text-gray-600">
-            OUR AWESOME SERVICES
+            OUR ROOMS
           </h2>
           <p className="text-center md:text-2xl text-xl lg:w-[80%] m-auto text-gray-500">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
@@ -475,8 +477,8 @@ export const Home = () => {
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit. Restaurant
           </p>
-          <div className="flex gap-8 md:flex-row flex-col">
-            <div className="left md:w-[50%] w-[100%]">
+          <div className="flex gap-8 lg:flex-row flex-col">
+            <div className="left xl:w-[50%] w-[100%]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.52632082853!2d76.76357549901144!3d28.643684629087268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1704876004704!5m2!1sen!2sin"
                 height="370"
@@ -486,26 +488,29 @@ export const Home = () => {
                 referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <div className="right md:w-[50%] w-[100%] flex flex-col gap-10">
+            <div className="right xl:w-[50%] w-[100%] flex flex-col gap-10">
               <form action="" className="flex flex-col gap-5">
-                <div className="flex gap-10">
+                <div className="flex sm:flex-row flex-col gap-2">
                   <a
                     href=""
-                    className="flex text-xl text-white w-full bg-[#debb6c] px-4 py-2"
+                    className="flex items-center text-xl text-white w-full bg-[#debb6c] px-4 py-2"
                   >
-                    +7894561230
+                    <CiLocationOn size={18} />
+                    Ayodhya
                   </a>
                   <a
                     href=""
-                    className="flex text-xl text-white w-full bg-[#debb6c] px-4 py-2"
+                    className="flex items-center text-xl text-white w-full bg-[#debb6c] px-4 py-2"
                   >
+                    <GiRotaryPhone size={18} />
                     +7894561230
                   </a>{" "}
                   <a
                     href=""
                     className="flex text-xl text-white w-full bg-[#debb6c] px-4 py-2"
                   >
-                    +7894561230
+                    <AiOutlineMail size={18} />
+                    contact@hotelawadhvilasayodhya.com
                   </a>
                 </div>
                 <div className="w-full">

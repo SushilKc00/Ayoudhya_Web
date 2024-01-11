@@ -1,15 +1,18 @@
 .resturant_section{
     background-color: rgb(242, 242, 242);
+    h2{
+        font-family: "Raleway",sans-serif;
+    }
     .our_resturant_banner{
         position: relative;
         width: 100%;
-        min-height: 70vh;
+        min-height: 75vh;
         background-image: url("https://static.toiimg.com/photo/msid-104292255,width-96,height-65.cms");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         z-index: 2;
         @media (max-width:768px) {
-            min-height: 50vh;
+            min-height: 40vh;
        }
         &::after{
             content: "";
@@ -27,8 +30,9 @@
             letter-spacing: 0.1rem;
             color: white;
             text-transform: uppercase;
-            margin-top: 6rem;
+            margin-top: 12rem;
             font-weight: 600;
+            font-family: "Raleway",sans-serif;
             @media (max-width:768px) {
                  font-size: 2.2rem;
                  margin-top: 2rem;
@@ -56,6 +60,11 @@
         }
          .our_menu{
                 margin-top: 5rem;
+                .menu_card{
+                    min-height: 130px;
+                     box-shadow: 0 0 2px rgb(230, 228, 228);
+                     padding-bottom: 1rem;
+                }
          }
     }
 }

@@ -1,8 +1,10 @@
 import React from "react";
 import { Header } from "../../Components/Header/Header";
 import aboutimg1 from "../../assets/aboutimg1.png";
+import useScrollTop from "../../Components/useScrollTop";
 
 export const About = () => {
+  useScrollTop();
   return (
     <div className="about_section">
       <Header Color={"black"} />
@@ -46,7 +48,7 @@ export const About = () => {
             <img src={aboutimg1} alt="" className="w-full" />
             <div className="flex justify-center gap-10 mt-8">
               <div className="detail_card">
-                <span>180</span>
+                <span>80</span>
                 <p>Rooms</p>
               </div>
               <div className="detail_card">
@@ -54,12 +56,12 @@ export const About = () => {
                 <p>Resturant</p>
               </div>
               <div className="detail_card">
-                <span>180</span>
-                <p>Rooms</p>
+                <span>20</span>
+                <p>Staffs</p>
               </div>
               <div className="detail_card">
-                <span>180</span>
-                <p>Rooms</p>
+                <span>2</span>
+                <p>Pools</p>
               </div>
             </div>
           </div>

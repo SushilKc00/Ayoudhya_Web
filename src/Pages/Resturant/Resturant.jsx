@@ -4,8 +4,50 @@ import resturant1 from "../../assets/restaurant1.jpg";
 import resturant2 from "../../assets/restaurant2.jpg";
 import resturant3 from "../../assets/restaurant3.jpg";
 import resturant4 from "../../assets/restaurant4.jpg";
+import { MenuCard } from "../../Components/Cards/MenuCard";
+import menuimg1 from "../../assets/menuimg1.webp";
+import menuimg2 from "../../assets/menuimg2.jpg";
+import menuimg3 from "../../assets/menuimg3.jpg";
 
 const restaurantImage = [resturant1, resturant2, resturant3, resturant4];
+const menuImage = [
+  {
+    name: "Deluxe Thali",
+    price: "600",
+    image: menuimg1,
+    desc: "Lorem ipsum dolor sit amet, elit, sed diam nonummy nibh euismod tincidunt ut laoreet...",
+  },
+  {
+    name: "Special Thali",
+    price: "850",
+    image: menuimg2,
+    desc: "Lorem ipsum dolor sit amet, elit, sed diam nonummy nibh euismod tincidunt ut laoreet...",
+  },
+  {
+    name: "Chinese",
+    price: "300",
+    image: menuimg3,
+    desc: "Lorem ipsum dolor sit amet, elit, sed diam nonummy nibh euismod tincidunt ut laoreet...",
+  },
+  {
+    name: " SPAGHETTI",
+    price: "600",
+    image: resturant4,
+    desc: "Lorem ipsum dolor sit amet, elit, sed diam nonummy nibh euismod tincidunt ut laoreet...",
+  },
+  {
+    name: "CHICKEN",
+    price: "600",
+    image: resturant1,
+    desc: "Lorem ipsum dolor sit amet, elit, sed diam nonummy nibh euismod tincidunt ut laoreet...",
+  },
+  {
+    name: "MEAT",
+    price: "600",
+    image: resturant1,
+    desc: "Lorem ipsum dolor sit amet, elit, sed diam nonummy nibh euismod tincidunt ut laoreet...",
+  },
+];
 
 export const Resturant = () => {
   return (
@@ -20,7 +62,7 @@ export const Resturant = () => {
           <div className="left xl:w-[60%] lg:w-[50%]">
             <h2 className="text-5xl font-bold text-gray-600">OUR RESTAURANT</h2>
             <p
-              className="text-2xl mt-6 text-gray-600"
+              className="text-2xl mt-10 text-gray-600"
               style={{
                 lineHeight: "2.6rem",
               }}
@@ -73,6 +115,11 @@ export const Resturant = () => {
           <h2 className="text-5xl uppercase font-bold text-gray-600">
             Our Menu
           </h2>
+          <div className="grid lg:grid-cols-2 sm:gap-y-24 gap-y-14 gap-x-10 mt-16">
+            {menuImage.map((d) => {
+              return <MenuCard menuDetails={d} />;
+            })}
+          </div>
         </div>
       </div>
     </div>

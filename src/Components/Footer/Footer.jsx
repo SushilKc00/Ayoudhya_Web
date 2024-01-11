@@ -2,12 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Nav_Links from "../Header/NavLinks";
 import logo from "../../assets/HeaderLogo.png";
-import {
-  AiOutlineFacebook,
-  AiOutlineTwitter,
-  AiOutlineGoogle,
-  AiOutlineLinkedin,
-} from "react-icons/ai";
+import { FaFacebookF, FaLinkedin } from "react-icons/fa";
+import { AiOutlineTwitter, AiOutlineMail } from "react-icons/ai";
 
 export const Footer = () => {
   return (
@@ -77,21 +73,18 @@ export const Footer = () => {
             </p>
           </div>
           <div className="flex gap-5 md:mt-0 mt-8">
-            <div>
-              <Link to="">{<AiOutlineFacebook size={20} />}</Link>
+            <div className="social_icons">
+              <Link to="">{<FaFacebookF size={20} />}</Link>
             </div>
-            <div>
+            <div className="social_icons">
               <Link to="">{<AiOutlineTwitter size={20} />}</Link>
             </div>{" "}
-            <div>
-              <Link to="">{<AiOutlineGoogle size={20} />}</Link>
+            <div className="social_icons">
+              <Link to="">{<AiOutlineMail size={20} />}</Link>
             </div>{" "}
-            <div>
-              <Link to="">{<AiOutlineLinkedin size={20} />}</Link>
+            <div className="social_icons">
+              <Link to="">{<FaLinkedin size={20} />}</Link>
             </div>{" "}
-            <div>
-              <Link to="">{<AiOutlineFacebook size={20} />}</Link>
-            </div>
           </div>
         </div>
       </div>

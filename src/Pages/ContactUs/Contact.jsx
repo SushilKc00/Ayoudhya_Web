@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "../../Components/Header/Header";
+import useScrollTop from "../../Components/useScrollTop";
 import "./contact.css";
 export const Contact = () => {
   const data = [
@@ -11,9 +12,10 @@ export const Contact = () => {
     { title: `web`, description: `hotelawadhvilasayodhya.com` },
     { title: `phone`, description: `+91 9120053008` },
   ];
+  useScrollTop();
   return (
-    <div className="bg-gray-500">
-      <Header />
+    <div>
+      <Header Color={"black"} />
       <main>
         <section className="map">
           <div>
@@ -127,7 +129,12 @@ export const Contact = () => {
                   </div>
                 </div>
                 <div className="mt-5 flex lg:content-end md:content-start sm:content-center  lg:mr-2">
-                  <button className="py-3 px-6 uppercase text-lg font-semibold bg-yellow-500 text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn" onClick={()=> {event.preventDefault()}}>
+                  <button
+                    className="py-3 px-6 uppercase text-lg font-semibold bg-yellow-500 text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
+                    onClick={() => {
+                      event.preventDefault();
+                    }}
+                  >
                     {" "}
                     send your message
                   </button>
