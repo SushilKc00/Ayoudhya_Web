@@ -3,6 +3,7 @@ import { Header } from "../../Components/Header/Header";
 import aboutimg1 from "../../assets/aboutimg1.png";
 import useScrollTop from "../../Components/useScrollTop";
 import aboutBackgroundImage from "../../assets/videoimg.jpg";
+import Number from "../../Components/Number";
 
 export const About = () => {
   useScrollTop();
@@ -21,7 +22,7 @@ export const About = () => {
       </div>
       <div className="about_content">
         <div className="xl:w-[80%] flex lg:flex-row flex-col m-auto px-4">
-          <div className="lg:w-[60%] w-[100%]">
+          <div className="lg:w-[50%] w-[100%]">
             <h2 className="text-gray-900 text-5xl">
               Hotel Awadh Vilas - Since 1989
             </h2>
@@ -52,24 +53,32 @@ export const About = () => {
               providing a complete experience of relaxation and rejuvenation.
             </p>
           </div>
-          <div className="lg:w-[40%]">
+          <div className="lg:w-[50%]">
             <img src={aboutimg1} alt="" className="w-full" />
             <div className="flex justify-center gap-10 mt-8">
               <div className="detail_card">
-                <span>80</span>
+                <span>
+                  <Number n={80} />+
+                </span>
                 <p>Rooms</p>
               </div>
               <div className="detail_card">
-                <span>18</span>
-                <p>Resturant</p>
+                <span>
+                  <Number n={300} />+
+                </span>
+                <p className="capitalize">visitors daily</p>
               </div>
               <div className="detail_card">
-                <span>20</span>
-                <p>Staffs</p>
+                <span>
+                  <Number n={95} />%
+                </span>
+                <p className="capitalize">positive feedback</p>
               </div>
               <div className="detail_card">
-                <span>2</span>
-                <p>Pools</p>
+                <span>
+                  <Number n={50} />+
+                </span>
+                <p className="capitalize">Awards & honors</p>
               </div>
             </div>
           </div>
