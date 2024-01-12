@@ -1,15 +1,31 @@
 import React from "react";
+import { BookForm } from "../../Components/BookForm/BookForm";
 import { Header } from "../../Components/Header/Header";
-import aboutimg1 from "../../assets/aboutimg1.png";
-import useScrollTop from "../../Components/useScrollTop";
 import aboutBackgroundImage from "../../assets/videoimg.jpg";
-import Number from "../../Components/Number";
+import roomimg1 from "../../assets/roomimg1.png";
 
-export const About = () => {
-  useScrollTop();
+import RoomsSwiper from "../../Components/Swiper/RoomsSwiper";
+import { RoomsCards } from "../../Components/Cards/RoomsCards";
+
+const roomImages = [
+  {
+    img: roomimg1,
+    roomType: "Single Room",
+  },
+  {
+    img: roomimg1,
+    roomType: "Double Room",
+  },
+  {
+    img: roomimg1,
+    roomType: "Single Room",
+  },
+];
+
+export const RoomSecond = () => {
   return (
-    <div className="about_section">
-      <Header Color={"black"} />
+    <div className="rooms_another_section">
+      <Header />
       <div
         className="paralax_container"
         style={{
@@ -18,18 +34,16 @@ export const About = () => {
       >
         <div>
           <div>
-            <h2 className="text-white sm:text-7xl text-5xl ">
-              About Awadh Vilas
-            </h2>
+            <h2 className="text-white sm:text-7xl text-5xl ">Single Room</h2>
           </div>
         </div>
       </div>
-      <div className="about_content">
-        <div className="xl:w-[80%] flex lg:flex-row flex-col m-auto px-4">
-          <div className="lg:w-[50%] w-[100%]">
-            <h2 className="text-gray-900 text-6xl">
-              Hotel Awadh Vilas - Since 1989
-            </h2>
+      <div className="xl:w-[80%] m-auto flex md:flex-row flex-col xl:px-0 px-5 room_another_container">
+        <div className="w-[70%]">
+          <RoomsSwiper />
+          <div className="swiper_area"></div>
+          <div className="about_hotel">
+            <h2 className="text-6xl">About Hotel Awadh Vilas</h2>
             <p className="text-gray-600 md:text-3xl text-xl py-8 tracking-[0.2rem] leading-snug">
               Awadh Vilas is a heritage hotel located in Ayodhya, a city in the
               northern Indian state of Uttar Pradesh. The hotel is known for its
@@ -57,35 +71,31 @@ export const About = () => {
               providing a complete experience of relaxation and rejuvenation.
             </p>
           </div>
-          <div className="lg:w-[50%]">
-            <img src={aboutimg1} alt="" className="w-full" />
-            <div className="flex justify-center gap-10 mt-8">
-              <div className="detail_card">
-                <span className="flex gap-2">
-                  <Number n={80} />+
-                </span>
-                <p>Rooms</p>
-              </div>
-              <div className="detail_card">
-                <span className="flex gap-2">
-                  <Number n={300} />+
-                </span>
-                <p className="capitalize">visitors daily</p>
-              </div>
-              <div className="detail_card">
-                <span className="flex gap-2">
-                  <Number n={95} />%
-                </span>
-                <p className="capitalize">positive feedback</p>
-              </div>
-              <div className="detail_card">
-                <span className="flex gap-2">
-                  <Number n={50} />+
-                </span>
-                <p className="capitalize">Awards & honors</p>
-              </div>
+          <div className="room_services mt-24 ">
+            <h2 className="text-6xl">Room Services</h2>
+            <div className="grid grid-cols-3 mt-20 gap-y-5">
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
+              <p className="text-2xl">Double Bed</p>
             </div>
           </div>
+          <div className="similar_rooms mt-32">
+            <h2 className="text-6xl uppercase">Similar Rooms</h2>
+            <div className="flex gap-5 mt-20">
+              {roomImages.map((d) => (
+                <RoomsCards roomDetails={d} />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="lg:w-[30%]">
+          <BookForm />
         </div>
       </div>
     </div>

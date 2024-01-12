@@ -433,10 +433,15 @@ const DropDown = ({ m }) => {
         }}
       >
         {m.subName.map((s) => (
-          <div className="menu_items">
+          <div className="menu_items flex justify-between">
             <div>
               <h5>{s.name}</h5>
-              <span>{s.price}</span>
+              <span>₹ {s.price}</span>
+            </div>
+            <div>
+              <button className="text-2xl bg-[#7F252A] text-white px-6 py-3 mt-5">
+                Add
+              </button>
             </div>
           </div>
         ))}

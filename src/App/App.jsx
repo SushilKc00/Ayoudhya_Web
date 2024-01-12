@@ -7,6 +7,7 @@ import { Resturant } from "../Pages/Resturant/Resturant";
 import { Contact } from "../Pages/ContactUs/Contact";
 import { Footer } from "../Components/Footer/Footer";
 import ServiceContextProvider from "../Context/ServiceContextProvider";
+import { RoomSecond } from "../Pages/Rooms/RoomSecond";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/about_us" element={<About />} />
             <Route path="/our_service" element={<OurService />} />
             <Route path="/rooms" element={<Rooms />} />
+            <Route path="/rooms_another" element={<RoomSecond />} />
             <Route path="/resturant" element={<Resturant />} />
             <Route path="/contact_us" element={<Contact />} />
           </Routes>

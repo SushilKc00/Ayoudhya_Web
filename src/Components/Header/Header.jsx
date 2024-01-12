@@ -58,7 +58,7 @@ export const Header = ({ Color }) => {
             />
           </div>
           <ul>
-            {Nav_Links.map((links) => {
+            {Nav_Links.map((links, index) => {
               return (
                 <>
                   <li
@@ -66,6 +66,7 @@ export const Header = ({ Color }) => {
                     onClick={() => {
                       links.class && alert("Book Now");
                     }}
+                    key={index}
                   >
                     <NavLink
                       to={links.src}
