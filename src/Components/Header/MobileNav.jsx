@@ -20,9 +20,9 @@ export const MobileNav = ({ show, setHamMenu }) => {
         X
       </p>
       <p className="text-center text-4xl text-gray-500">Menu</p>
-      {Nav_Links.map((links) => {
+      {Nav_Links.map((links, index) => {
         return (
-          <li className="flex items-center gap-3">
+          <li className="flex items-center gap-3" key={index}>
             <NavLink to={links.src}>{links.linkName}</NavLink>
             {/* <IoIosArrowDown size={12} /> */}
           </li>

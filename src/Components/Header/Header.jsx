@@ -62,11 +62,11 @@ export const Header = ({ Color }) => {
               return (
                 <>
                   <li
+                    key={index}
                     className={`flex items-center ${links.class}`}
                     onClick={() => {
                       links.class && alert("Book Now");
                     }}
-                    key={index}
                   >
                     <NavLink
                       to={links.src}

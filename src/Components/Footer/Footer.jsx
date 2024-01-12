@@ -38,9 +38,9 @@ export const Footer = () => {
         <div className="mt-10">
           <h3>Useful links</h3>
           <ul>
-            {Nav_Links.map((links) => {
+            {Nav_Links.map((links, index) => {
               return (
-                <li className="flex items-center gap-3">
+                <li className="flex items-center gap-3" key={index}>
                   <Link to={links.src}>{links.linkName}</Link>
                   {/* <IoIosArrowDown size={12} /> */}
                 </li>

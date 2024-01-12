@@ -1,12 +1,16 @@
 import React from "react";
-import "./ourservice.css";
 import { Header } from "../../Components/Header/Header";
-import BannerImg from "../../assets/ayodhya.png";
+// import BannerImg from "../../assets/ayodhya.png";
+import BannerImg from "../../assets/jesse-gardner.jpg";
 import { Link } from "react-router-dom";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
+import useScrollTop from "../../Components/useScrollTop";
+
 
 export const OurService = () => {
+
+  useScrollTop();
 
   const email= "Contact@hotelawadhvilasayodhya.com";
   const number = "+91 9120053008"
@@ -28,17 +32,18 @@ export const OurService = () => {
       >
         <div
           className="w-[100%] h-[100%] z-0 "
-          style={{ background: "rgba(252,237,250,.6)" }}
+          // style={{ background: `linear-gradient(95deg, rgba(147, 0, 17, 0.50) 0%, rgba(86, 20, 147, 0.50) 100%)` }}
+          style={{ background: "rgba(252,237,250,.6)"}}
         >
           <Header />
           <div className=" max-w-[1320px] m-auto flex flex-col items-center justify-center border-yellow-800 border-b-4 z-10 min-h-[40vh]">
             <div>
-              <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl md:text-6xl text-3xl capitalize text-yellow-800">
+              <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl md:text-6xl text-3xl capitalize text-slate-100">
                 We are awesome
               </h1>
             </div>
             <div>
-              <h2 className="text-center font-fl-lex font-semibold lg:text-8xl md:text-7xl text-5xl  capitalize">
+              <h2 className="text-center font-fl-lex font-semibold lg:text-8xl md:text-7xl text-5xl  capitalize text-slate-100">
                 Hotel facilities
               </h2>
             </div>

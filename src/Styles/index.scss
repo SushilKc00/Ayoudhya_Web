@@ -37,6 +37,25 @@ html,body{
 .bg_salmon{
     overflow-y: hidden;
 }
+
+#root{
+    overflow: hidden;
+}
+
+.container{
+    width: min(100%,1320px);
+}
+
+.text-clr-gray{
+    color:  #606060;
+}
+.text-clr-yellow{
+    color: #DEB666;
+}
+.text-clr-gray-dark{
+    color: #858A99;
+}
+
 .paralax_container{
     width: 100%;
     height: 28vh;
