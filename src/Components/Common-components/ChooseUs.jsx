@@ -77,27 +77,27 @@ function ChooseUs() {
                   </h2>
                 </div>
                 <div className="max-w-[60%]">
-                  <p className="text-center lg:text-8xl font-semibold capitalize font-fl-lex text-slate-200">
+                  <p className="text-center lg:text-8xl md:text-5xl text-4xl font-semibold capitalize font-fl-lex text-slate-100">
                     closest from Famous Places In Ayodha ji
                   </p>
                 </div>
-                <div className="boder-b-4 border-yellow-500 max-w-[40px] h-5"></div>
-                <div className="mt-7 w-[1320px] lg:flex">
-                  <div className="bg-white p-5 w-[60%] h-max">
+                <div className="boder-b-4 border-yellow-500 h-5 mt-3"></div>
+                <div className="mt-7 container lg:flex md:flex block">
+                  <div className="bg-white p-5 lg:w-[60%] w-[100%] lg:me-20 h-max">
                     {destination.map((item, i) => (
                       <div className="flex gap-2 border-dotted border-b-2 border-yellow-800 w-[100%] pb-2 mb-3" key={i}>
                         <div className="icon text-3xl text-yellow-800">
                           {item.icon}
                         </div>
                         <div className="">
-                          <h3 className="font-normal text-3xl font-fl-lex">
+                          <h3 className="font-normal lg:text-3xl md:text-2xl text-xl  font-fl-lex">
                             {item.destinationName} - {item.destinationRange}
                           </h3>
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div className="w-[40%] max-h-[550px] p-3 flex items-center justify-center">
+                  <div className="lg:w-[40%] w-[100%] max-h-[550px] p-3 flex items-center justify-center">
                     <img
                       src={Temple1}
                       alt="temple"

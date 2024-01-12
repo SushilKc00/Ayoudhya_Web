@@ -11,6 +11,7 @@ import Mail from "../../assets/svg/email-svgrepo-com.svg";
 import Web from "../../assets/svg/browser-web-internet-network-svgrepo-com.svg";
 import Location from "../../assets/svg/map-location-svgrepo-com.svg";
 import { Link } from "react-router-dom";
+import useScrollTop from "../../Components/useScrollTop";
 
 export const Contact = () => {
   const data = [
@@ -34,6 +35,7 @@ export const Contact = () => {
     { icon: <CiLinkedin />, link: "#", title: "linkedin" },
     { icon: <FaTwitter />, link: "#", title: "twitter" },
   ];
+  useScrollTop();
   return (
     <div className="bg-gray-200 contact-page">
       <Header Color="bg-white" />
@@ -97,7 +99,7 @@ export const Contact = () => {
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-3">
+                  <div className="sm:col-span-full">
                     <label
                       htmlFor="Email"
                       className="block contact-label text-clr-gray  font-normal  capitalize"
@@ -114,7 +116,7 @@ export const Contact = () => {
                       />
                     </div>
                   </div>
-                  <div className="sm:col-span-3">
+                  {/* <div className="sm:col-span-3">
                     <label
                       htmlFor="Subject"
                       className="block contact-label text-clr-gray  font-normal  capitalize"
@@ -130,7 +132,7 @@ export const Contact = () => {
                         className="block w-full  border-0 py-3.5 px-2.5 outline-none lg:text-3xl md:text-2xl text-2xl shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset"
                       />
                     </div>
-                  </div>
+                  </div> */}
                   <div className="col-span-full">
                     <label
                       htmlFor="message"
@@ -149,9 +151,9 @@ export const Contact = () => {
                     </div>
                   </div>
                 </div>
-                <div className="mt-5 flex lg:justify-end md:justify-start  lg:mr-2">
+                <div className="mt-5 flex lg:justify-end md:justify-start lg:mr-2">
                   <button
-                    className="py-3 lg:w-max md:w-max sm:w-[100%] px-6 uppercase text-lg font-semibold bg-yellow-500 text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
+                    className="py-3 lg:w-max w-[100%] md:w-max px-6 justify-center uppercase text-lg font-semibold bg-yellow-500 text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
                     onClick={() => {
                       event.preventDefault();
                     }}

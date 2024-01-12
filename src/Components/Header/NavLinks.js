@@ -23,6 +23,11 @@ const Nav_Links = [
     linkName: "Contact Us",
     src: "/contact_us",
   },
+  {
+    linkName: "Book Now",
+    class: "book_now_btn",
+    src: "",
+  },
 ];
 
 export default Nav_Links;

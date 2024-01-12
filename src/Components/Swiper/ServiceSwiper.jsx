@@ -26,17 +26,10 @@ export const ServiceSwiper = ({ i }) => {
           disableOnInteraction: false,
         }}
         grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        }}
         // pagination={true}
         modules={[EffectCube, Pagination, Autoplay]}
         onSlideChange={(i) => {
-          console.log(i);
-          setSlideIndexValue(i.activeIndex);
+          setSlideIndexValue(i.realIndex);
         }}
       >
         {serviceImages.map((i) => (

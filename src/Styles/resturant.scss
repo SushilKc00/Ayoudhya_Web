@@ -1,15 +1,17 @@
 .resturant_section{
     background-color: rgb(242, 242, 242);
+    h2{
+        font-family: "Raleway",sans-serif;
+    }
     .our_resturant_banner{
         position: relative;
         width: 100%;
-        min-height: 70vh;
-        background-image: url("https://static.toiimg.com/photo/msid-104292255,width-96,height-65.cms");
+        min-height: 75vh;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         z-index: 2;
         @media (max-width:768px) {
-            min-height: 50vh;
+            min-height: 40vh;
        }
         &::after{
             content: "";
@@ -27,10 +29,15 @@
             letter-spacing: 0.1rem;
             color: white;
             text-transform: uppercase;
-            margin-top: 6rem;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             font-weight: 600;
+            font-family: "Raleway",sans-serif;
             @media (max-width:768px) {
-                 font-size: 2.2rem;
+                 font-size: 2.8rem;
                  margin-top: 2rem;
             }
         }
@@ -38,11 +45,15 @@
     .resturant_container{
         width: 80%;
         margin: 0 auto;
-        padding: 8rem 2rem; 
+        padding: 8rem 0; 
+        font-family: "";
         @media (max-width:1300px) {
             width: 100%;
+            padding: 8rem 1.25rem;
          }
         .our_resturant{
+            font-family: "Lato";
+
             .right{
                 >div{
                     width: 100%;
@@ -56,6 +67,55 @@
         }
          .our_menu{
                 margin-top: 5rem;
+                font-family: "Lato";
+
+                .menu_card{
+                    min-height: 130px;
+                     box-shadow: 0 0 2px rgb(230, 228, 228);
+                     padding-bottom: 1rem;
+                }
+                .drop_down_menu{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2rem;
+                    margin-top: 1rem;  
+                    .drop_menu_items{
+                        width: 100%;
+                        background-color: #7F252A;
+                        padding: 0.8rem 1.8rem;
+                        color: white;
+                        border-radius: 2px;
+                        cursor: pointer;
+                   
+                        h4{                
+                            font-size: 1.5rem;
+                            font-weight: 800;
+                            font-family: "Lato";
+                        }
+                        .menu_content{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.2rem;
+                            overflow: hidden;
+                            transition: all 0.6s ease-in-out;
+                            .menu_items{
+                                border: 1px solid rgb(193, 193, 193);
+                                padding: 0.6rem 1.5rem;
+                                width: 95%;
+                                margin: 0.8rem auto;
+                                border-radius: 2px;
+                                h5{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                }
+                                span{
+                                    font-size: 1.5rem;
+                                    font-weight: 800;
+                                }
+                            }
+                        }
+                    }
+                }
          }
     }
 }
