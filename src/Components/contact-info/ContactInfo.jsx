@@ -55,18 +55,9 @@ const ContactInfo = ({ title, description, icon }) => {
   return (
     <div className="flex flex-col pt-2 pb-2 gap-3 items-start self-stretch lg:mt-5 md:mt-4 sm:mt-2">
       <div className="flex gap-3 items-center justify-start py-3 ps-0 pe-3">
-        <div className="flex items-start bg-yellow-800 px-2 py-2 rounded-full">
+        <div className="flex items-start  px-2 py-2 rounded-full btn_bg_color text-white">
           {" "}
-          <img
-            src={icon}
-            width={25}
-            height={30}
-            alt={title}
-            className="text-3xl "
-            // style={{
-            //   filter: "brightness(0) invert(1)",
-            // }}
-          />
+          <span className="text-4xl">{icon}</span>
         </div>
         <div>
           <h4 className="contact-fs-15 text-clr-yellow  uppercase font-black">

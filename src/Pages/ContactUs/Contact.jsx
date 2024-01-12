@@ -12,22 +12,28 @@ import Web from "../../assets/svg/browser-web-internet-network-svgrepo-com.svg";
 import Location from "../../assets/svg/map-location-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 import useScrollTop from "../../Components/useScrollTop";
-import { AiOutlinePhone } from "react-icons/ai";
+import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
+import { CiLocationOn } from "react-icons/ci";
+import { IoLinkSharp } from "react-icons/io5";
 
 export const Contact = () => {
   const data = [
     {
       title: `address`,
       description: `PNB Road Near Maniramdas Chhawani Chhoti Chhawani Ayodhya, Uttar Pradesh 224123`,
-      icon: Location,
+      icon: <CiLocationOn />,
     },
     {
       title: `email`,
       description: `contact@hotelawadhvilasayodhya.com`,
-      icon: Mail,
+      icon: <AiOutlineMail />,
     },
-    { title: `web`, description: `hotelawadhvilasayodhya.com`, icon: Web },
-    { title: `phone`, description: `+91 9120053008`, icon: Call },
+    {
+      title: `web`,
+      description: `hotelawadhvilasayodhya.com`,
+      icon: <IoLinkSharp />,
+    },
+    { title: `phone`, description: `+91 9120053008`, icon: <AiOutlinePhone /> },
   ];
 
   const social = [
