@@ -15,7 +15,9 @@ export const About = () => {
           backgroundImage: `url(${aboutBackgroundImage})`,
         }}
       >
-        <h2 className="text-white text-5xl">About Awadh Vilas</h2>
+        <div className="xl:w-[80%] m-auto">
+          <h2 className="text-white text-5xl ">About Awadh Vilas</h2>
+        </div>
       </div>
       <div className="about_content">
         <div className="xl:w-[80%] flex lg:flex-row flex-col m-auto px-4">

@@ -109,7 +109,7 @@ export const Home = () => {
   const [playVideo, SetPlayVideo] = useState(false);
   const { slideIndexValue } = useServiceHook();
 
-  useScrollTop();
+  // useScrollTop();
   return (
     <div>
       {/* WELCOME SECTION....... */}
@@ -121,8 +121,8 @@ export const Home = () => {
           }}
         >
           <Header Color={"white"} />
-          <div className="lg:flex gap-3 px-5 xl:w-[75%] m-auto mt-28">
-            <div className="lg:w-[80%]">
+          <div className="lg:flex gap-3 xl:w-[80%] m-auto mt-28 xl:p-0 px-5">
+            <div className="lg:w-[70%]">
               <h2 className="sm:text-6xl text-4xl text-white font-semibold leading-snug">
                 Welcome to Hotel Awadh Vilas & Restaurant
               </h2>
@@ -150,7 +150,7 @@ export const Home = () => {
                 </p>
               </div>
             </div>
-            <div className="lg:w-[35%] lg:mt-0 mt-10">
+            <div className="lg:w-[40%] lg:mt-0 mt-10">
               <form
                 action=""
                 className="bg-white flex flex-col gap-5 pb-8 rounded-lg"
@@ -192,10 +192,10 @@ export const Home = () => {
                       Single Room
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      Double Room
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      Deluxe Room
                     </option>
                   </select>
                 </div>
@@ -208,13 +208,16 @@ export const Home = () => {
                       Adults
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      1
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      2
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      3
+                    </option>
+                    <option value="" className="text-gray-400 text-2xl mt-5">
+                      4
                     </option>
                   </select>
                   <select
@@ -222,54 +225,34 @@ export const Home = () => {
                     className="w-full p-4 text-xl border border-gray-300 outline-none"
                   >
                     <option value="" className="text-gray-400 text-2xl">
-                      Adults
+                      Childrens
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      1
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      2
                     </option>
                     <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
+                      3
                     </option>
                   </select>
                 </div>
                 <div className="flex gap-2 px-8">
-                  <select
-                    type="text"
+                  <input
+                    type="date"
+                    name=""
+                    id=""
                     className="w-full p-4 text-xl border border-gray-300 outline-none"
-                  >
-                    <option value="" className="text-gray-400 text-2xl">
-                      Adults
-                    </option>
-                    <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
-                    </option>
-                    <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
-                    </option>
-                    <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
-                    </option>
-                  </select>
-                  <select
-                    type="text"
+                    value="Check in"
+                  />
+
+                  <input
+                    type="date"
+                    name=""
+                    id=""
                     className="w-full p-4 text-xl border border-gray-300 outline-none"
-                  >
-                    <option value="" className="text-gray-400 text-2xl">
-                      Adults
-                    </option>
-                    <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
-                    </option>
-                    <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
-                    </option>
-                    <option value="" className="text-gray-400 text-2xl mt-5">
-                      Single Room
-                    </option>
-                  </select>
+                  />
                 </div>
                 <div className="flex justify-center">
                   <button className="bg-[#B69854] text-white text-3xl w-[90%] py-4">
@@ -288,7 +271,7 @@ export const Home = () => {
       {/* ROOMS SECTION..... */}
       <section className="rooms_section">
         <div className="favorite_rooms">
-          <h2 className="md:text-5xl text-3xl text-center font-bold text-gray-600">
+          <h2 className="md:text-5xl text-4xl text-center font-bold text-gray-600">
             OUR ROOMS
           </h2>
           <p className="text-center md:text-2xl text-xl lg:w-[80%] m-auto text-gray-500">
@@ -328,7 +311,7 @@ export const Home = () => {
             <div className="left lg:w-[60%] md:w-[50%] w-[100%]">
               <ServiceSwiper />
             </div>
-            <div className="right  lg:w-[40%] md:w-[50%] w-[100%] flex flex-col gap-11">
+            <div className="right  lg:w-[40%] md:w-[50%] w-[100%] flex flex-col gap-11 sm:mt-0 mt-8">
               {serviceArr.map((s, index) => (
                 <div
                   className="flex items-center gap-10 bg-white px-5 py-3"
@@ -466,7 +449,7 @@ export const Home = () => {
                       !! 🚩जय श्री राम🚩 !!
                     </div>
                   </div>
-                  <h4 className="text-3xl capitalize text-red-700 font-extrabold py-2 text-center">
+                  <h4 className="text-3xl capitalize text-red-700 font-extrabold py-8 text-center">
                     {i.name}
                   </h4>
                 </div>
@@ -504,21 +487,21 @@ export const Home = () => {
                 <div className="flex sm:flex-row flex-col gap-2">
                   <a
                     href=""
-                    className="flex items-center text-xl text-white w-full bg-[#debb6c] px-4 py-2"
+                    className="flex items-center  gap-2 text-xl text-white w-full bg-[#debb6c] px-4 py-2"
                   >
                     <CiLocationOn size={18} />
                     Ayodhya
                   </a>
                   <a
                     href=""
-                    className="flex items-center text-xl text-white w-full bg-[#debb6c] px-4 py-2"
+                    className="flex items-center gap-2 text-xl text-white w-full bg-[#debb6c] px-4 py-2"
                   >
                     <GiRotaryPhone size={18} />
                     +7894561230
                   </a>{" "}
                   <a
                     href=""
-                    className="flex text-xl text-white w-full bg-[#debb6c] px-4 py-2"
+                    className="flex text-xl gap-2 text-white w-full bg-[#debb6c] px-4 py-2"
                   >
                     <AiOutlineMail size={18} />
                     contact@hotelawadhvilasayodhya.com

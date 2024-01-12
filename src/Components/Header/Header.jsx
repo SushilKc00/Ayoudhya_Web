@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import headerLogo from "../../assets/HeaderLogo.png";
 import Nav_Links from "./NavLinks";
 import { NavLink } from "react-router-dom";
-import { IoIosArrowDown } from "react-icons/io";
 import { BiUpArrow } from "react-icons/bi";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { MdMenu } from "react-icons/md";
