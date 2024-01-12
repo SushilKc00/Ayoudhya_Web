@@ -1,52 +1,53 @@
 .rooms_another_section{
    .room_another_container{
-    padding: 8rem 0;
-    @media (max-width:1300px) {
-       padding: 8rem 1.25rem;
+    @media (max-width:500px) {
+       padding: 4rem 1.25rem;
        flex-direction: column;
     }
     p{
       line-height: 2.7rem;
     }
-    .swiper_area{
-      img{
-        width: 100%;
-        height: 400px;
-        @media(max-width:500px) {
-            height: 220px;
-        }
+   }
+   .swiper_area{
+    position: relative;
+    z-index: -1;
+    img{
+      width: 100%;
+      height: 400px;
+      @media(max-width:500px) {
+          height: 220px;
       }
     }
-    .need_help{
-       h3{
-        font-size: 1.5rem;
-        font-weight: 800;
-       }
+  }
+  .need_help{
+     h3{
+      font-size: 1.5rem;
+      font-weight: 800;
+     }
+    >div{
+      border: 2px solid #B69854;
+      padding: 0.2rem;
+      margin-top: 2rem;
       >div{
         border: 2px solid #B69854;
-        padding: 0.2rem;
-        margin-top: 2rem;
-        >div{
-          border: 2px solid #B69854;
-          display: flex;
-          flex-direction: column;
-          gap: 1.2rem;
-          padding: 1.8rem 1.2rem;
-          p{
-            font-size: 1.4rem;
-          }
-          a{
-            font-size: 1.2rem;
-          }
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.8rem 1.2rem;
+        p{
+          font-size: 1.4rem;
+        }
+        a{
+          font-size: 1.2rem;
         }
       }
     }
-    .mySwiper{
-      margin-top: 1.4rem;
-       img{
-        height: 55px;
-        width: 120px;
-       }
-    }
-   }
+  }
+  .mySwiper{
+    margin-top: 1.4rem;
+     img{
+      height: 85px;
+      width: 120px;
+     }
+  }
 }

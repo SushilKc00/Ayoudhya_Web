@@ -12,7 +12,7 @@ export const Header = ({ Color }) => {
   const [hamMenu, setHamMenu] = useState(false);
 
   const scrollHeaderStyling = () => {
-    if (window.scrollY > 400) {
+    if (window.scrollY > 500) {
       setChagneHeaderStyle(true);
     } else {
       setChagneHeaderStyle(false);
@@ -33,7 +33,7 @@ export const Header = ({ Color }) => {
         color: changeHeaderStyle ? "black" : Color,
       }}
     >
-      <nav>
+      <nav className="max-w-[1320px] m-auto">
         {!changeHeaderStyle && (
           <div className="upper_div md:flex justify-end gap-10 lg:visible hidden">
             <div className="flex items-center gap-3">

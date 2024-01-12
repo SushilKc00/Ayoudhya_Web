@@ -8,7 +8,7 @@ import { AiOutlineTwitter, AiOutlineMail } from "react-icons/ai";
 export const Footer = () => {
   return (
     <footer>
-      <div className="upper_footer">
+      <div className="upper_footer max-w-[1320px] m-auto py-4 px-2">
         <div>
           <img src={logo} alt="footer_logo" width={100} />
           <p>
@@ -65,26 +65,28 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="lower_footer">
-        <div className="w-[80%] m-auto md:flex justify-between items-center">
-          <div>
-            <p className="md:text-2xl text-xl text-gray-500">
-              Copyright 2021 Hotel Awadh Vilas All Rights Reserved.
-            </p>
-          </div>
-          <div className="flex gap-5 md:mt-0 mt-8">
-            <div className="social_icons">
-              <Link to="">{<FaFacebookF size={20} />}</Link>
+      <div className="lower_container">
+        <div className="lower_footer max-w-[1320px] m-auto py-4 px-2">
+          <div className="md:flex justify-between items-center">
+            <div>
+              <p className="md:text-2xl text-xl text-gray-500">
+                Copyright 2021 Hotel Awadh Vilas All Rights Reserved.
+              </p>
             </div>
-            <div className="social_icons">
-              <Link to="">{<AiOutlineTwitter size={20} />}</Link>
-            </div>{" "}
-            <div className="social_icons">
-              <Link to="">{<AiOutlineMail size={20} />}</Link>
-            </div>{" "}
-            <div className="social_icons">
-              <Link to="">{<FaLinkedin size={20} />}</Link>
-            </div>{" "}
+            <div className="flex gap-5 md:mt-0 mt-8">
+              <div className="social_icons">
+                <Link to="">{<FaFacebookF size={20} />}</Link>
+              </div>
+              <div className="social_icons">
+                <Link to="">{<AiOutlineTwitter size={20} />}</Link>
+              </div>{" "}
+              <div className="social_icons">
+                <Link to="">{<AiOutlineMail size={20} />}</Link>
+              </div>{" "}
+              <div className="social_icons">
+                <Link to="">{<FaLinkedin size={20} />}</Link>
+              </div>{" "}
+            </div>
           </div>
         </div>
       </div>

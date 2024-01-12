@@ -314,7 +314,6 @@ export const Resturant = () => {
   // useScrollTop();
   return (
     <div className="resturant_section">
-      {/* <Header Color={"black"} /> */}
       <div
         className="our_resturant_banner"
         style={{
@@ -322,14 +321,18 @@ export const Resturant = () => {
         }}
       >
         <Header Color={"white"} />
-        <h2>welcome to Hotel Awadh Vilas</h2>
+        <div className=" h-[35vh] flex items-center justify-center">
+          <h2>welcome to Hotel Awadh Vilas</h2>
+        </div>
       </div>
-      <div className="resturant_container">
+      <div className="resturant_container max-w-[1320px] m-auto py-[8rem] px-2">
         <div className="our_resturant flex lg:flex-row flex-col gap-10">
           <div className="left xl:w-[60%] lg:w-[50%]">
-            <h2 className="text-5xl font-bold text-gray-600">OUR RESTAURANT</h2>
+            <h2 className="sm:text-5xl text-[2rem] font-bold text-gray-600">
+              OUR RESTAURANT
+            </h2>
             <p
-              className="text-2xl mt-10 text-gray-600 text-justify"
+              className="sm:text-2xl text-[1.2rem] sm:mt-10 mt-5 text-gray-600 text-justify"
               style={{
                 lineHeight: "2.6rem",
               }}
@@ -338,7 +341,7 @@ export const Resturant = () => {
               Soup. Soft Drink, Breakfast, Paneer, Sweet Dish, Thali and a wide
               range of mouth-watering items grace our menu all the time.
             </p>
-            <p className="text-2xl text-gray-600 leading-[2.6rem] mt-8 text-justify">
+            <p className="sm:text-2xl text-[1.2rem] text-gray-600 sm:leading-[2.8rem] leading-[2.4rem] mt-8 text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo
               laboriosam tempore sint cumque, repellat doloribus officiis
               inventore ducimus earum, iure quam dignissimos, enim doloremque
@@ -368,7 +371,7 @@ export const Resturant = () => {
         </div>
 
         <div className="our_menu">
-          <h2 className="text-5xl uppercase font-bold text-gray-600">
+          <h2 className="sm:text-5xl text-[2rem] uppercase font-bold text-gray-600">
             Our Menu
           </h2>
           <div className="flex lg:flex-row flex-col gap-7 mt-12">

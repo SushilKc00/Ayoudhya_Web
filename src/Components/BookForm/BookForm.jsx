@@ -104,7 +104,7 @@ export const BookForm = () => {
           />
         </div>
         <div className="flex justify-center">
-          <button className="bg-[#B69854] text-white text-3xl w-[90%] py-4">
+          <button className="bg-[#B69854] text-white text-3xl w-[90%] py-4 hover:bg-[#d5b872] transition-all">
             Book A Room Now
           </button>
         </div>

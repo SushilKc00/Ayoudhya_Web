@@ -110,7 +110,7 @@ export const Home = () => {
   const [playVideo, SetPlayVideo] = useState(false);
   const { slideIndexValue } = useServiceHook();
 
-  useScrollTop();
+  // useScrollTop();
   return (
     <div>
       {/* WELCOME SECTION....... */}
@@ -122,31 +122,32 @@ export const Home = () => {
           }}
         >
           <Header Color={"white"} />
-          <div className="lg:flex gap-3 xl:w-[86.88%] m-auto mt-28 xl:p-0 px-5">
+          <div className="lg:flex gap-3 max-w-[1320px] m-auto lg:mt-28 mt-5 py-4 px-2">
             <div className="lg:w-[70%]">
-              <h2 className="sm:text-6xl text-4xl text-white font-semibold leading-snug">
+              <h2 className="sm:text-6xl text-[1.7rem] sm:text-start text-center text-white font-semibold leading-snug">
                 Welcome to Hotel Awadh Vilas & Restaurant
               </h2>
-              <div className="flex gap-4 items-center mt-12">
-                <div className="text-white flex gap-2">
-                  <CiStar size={30} />
-                  <CiStar size={30} />
-                  <CiStar size={30} />
-                  <CiStar size={30} />
-                  <CiStar size={30} />
+              <div className="flex sm:flex-row flex-col sm:gap-4 gap-1 items-center mt-12">
+                <div className="text-white flex sm:gap-2 gap-">
+                  <CiStar size={24} />
+                  <CiStar size={24} />
+                  <CiStar size={24} />
+                  <CiStar size={24} />
+                  <CiStar size={24} />
                 </div>
+                24
                 <p className="sm:text-5xl text-3xl text-white">
                   Star Luxury Hotel
                 </p>
               </div>
-              <div className="flex flex-col gap-14 mt-12 text-white">
-                <p className="sm:text-3xl text-2xl flex gap-4">
+              <div className="flex flex-col sm:items-start items-center sm:gap-14 gap-8 mt-12 text-white">
+                <p className="sm:text-3xl text-xl flex gap-4">
                   <BsCheck2Square size={20} /> Modern Rooms & Specious Suites
                 </p>
-                <p className="sm:text-3xl text-2xl flex gap-4">
+                <p className="sm:text-3xl text-xl flex gap-4">
                   <BsCheck2Square size={20} /> Modern Rooms & Specious Suites
                 </p>{" "}
-                <p className="sm:text-3xl text-2xl flex gap-4">
+                <p className="sm:text-3xl text-xl flex gap-4">
                   <BsCheck2Square size={20} /> Modern Rooms & Specious Suites
                 </p>
               </div>
@@ -160,17 +161,17 @@ export const Home = () => {
 
       {/* ROOMS SECTION..... */}
       <section className="rooms_section">
-        <div className="favorite_rooms">
-          <h2 className="md:text-5xl text-4xl text-center font-bold text-gray-600">
+        <div className="favorite_rooms max-w-[1320px] m-auto py-4 px-2">
+          <h2 className="md:text-5xl text-[2rem] text-center font-bold text-gray-600">
             OUR ROOMS
           </h2>
-          <p className="text-center md:text-2xl text-xl lg:w-[80%] m-auto text-gray-500">
+          <p className="text-center md:text-2xl text-[1.2rem] lg:w-[80%] m-auto text-gray-500">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit. Restaurant
           </p>
-          <div className="flex lg:flex-row flex-wrap flex-col gap-5 justify-center">
+          <div className="flex lg:flex-row flex-col gap-5 justify-center">
             {roomImages.map((d) => {
               return <RoomsCards roomDetails={d} />;
             })}
@@ -187,11 +188,11 @@ export const Home = () => {
 
       {/* SERVICE SECTION... */}
       <section className="service_section">
-        <div className="service_container">
-          <h2 className="md:text-5xl text-3xl text-center font-bold text-gray-600">
+        <div className="service_container max-w-[1320px] m-auto py-4 px-2">
+          <h2 className="md:text-5xl text-[2rem] text-center font-bold text-gray-600">
             OUR AWESOME SERVICES
           </h2>
-          <p className="text-center md:text-2xl text-xl lg:w-[80%] m-auto text-gray-500">
+          <p className="sm:text-center text-justify md:text-2xl text-[1.2rem] lg:w-[80%] m-auto text-gray-500">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
@@ -264,11 +265,11 @@ export const Home = () => {
 
       {/* NEWS & EVENTS.... */}
       <section className="news_section">
-        <div className="news_container">
-          <h2 className="md:text-5xl text-3xl text-center font-bold text-gray-600">
+        <div className="news_container max-w-[1320px] m-auto py-4 px-2">
+          <h2 className="md:text-5xl text-[2rem] text-center font-bold text-gray-600">
             LATEST NEWS & EVENTS
           </h2>
-          <p className="text-center md:text-2xl text-xl lg:w-[80%] m-auto text-gray-500">
+          <p className="sm:text-center text-justify md:text-2xl text-[1.2rem] lg:w-[80%] m-auto text-gray-500">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
@@ -322,11 +323,11 @@ export const Home = () => {
 
       {/* VISIT PLACE....... */}
       <section className="visit_place_section">
-        <div className="visit_place_container">
-          <h2 className="md:text-5xl text-3xl text-center font-bold text-gray-600">
+        <div className="visit_place_container max-w-[1320px] m-auto py-4 px-2">
+          <h2 className="md:text-5xl text-[2rem] text-center font-bold text-gray-600">
             Must Visit Places In
           </h2>
-          <h3 className="md:text-6xl text-3xl text-center font-bold text-[#A94E00] uppercase -tracking-tighter">
+          <h3 className="md:text-6xl text-[2rem] text-center font-bold text-[#A94E00] uppercase -tracking-tighter">
             Ayodhya Ji
           </h3>
           <div className="flex  md:flex-row md:flex-nowrap flex-wrap ustify-center gap-5">
@@ -351,11 +352,11 @@ export const Home = () => {
 
       {/* LOCATION & CONTACT SECTION..... */}
       <section className="location_contact_section">
-        <div className="contact_container">
-          <h2 className="md:text-5xl text-3xl text-center font-bold text-gray-600">
+        <div className="contact_container max-w-[1320px] m-auto py-4 px-2">
+          <h2 className="md:text-5xl text-[2rem] text-center font-bold text-gray-600">
             LOCATION - CONTACT US
           </h2>
-          <p className="text-center md:text-2xl text-xl lg:w-[80%] m-auto text-gray-500">
+          <p className="sm:text-center text-justify md:text-2xl text-[1.2rem] lg:w-[80%] m-auto text-gray-500">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation

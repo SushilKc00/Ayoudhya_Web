@@ -2,8 +2,6 @@ footer{
     background-color: #F9F9F9;
     box-shadow: 0 0 4px rgb(225, 225, 225);
     .upper_footer{
-        width: 86.88%;
-        margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: 4rem;
@@ -51,38 +49,37 @@ footer{
             }
         }
     }
-    .lower_footer{
+    .lower_container{
         background-color: rgb(255, 255, 255);
-        // min-height: 6rem;
         width: 100%;
         box-shadow: 0 0 5px rgb(210, 210, 210);
-        display: flex;
-        align-items: center;
-        padding: 2.5rem 0;
-        @media screen and (max-width:768px) {
-              flex-direction: column;
-        }
-        .social_icons{
-            width: 38px;
-            height: 38px;
-            border-radius: 100%;
-            background-color: rgb(255, 255, 255);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-
-            &:nth-child(1){
-                background-color: #0866FF;
+        .lower_footer{
+            @media screen and (max-width:768px) {
+                  flex-direction: column;
+                  padding: 2.5rem 1.2rem;
             }
-            &:nth-child(2){
-                background-color: #1DA1F2;
-            }
-            &:nth-child(3){
-               background-color: #D06555;
-            }
-            &:nth-child(4){
-                background-color: #0077B5;
+            .social_icons{
+                width: 38px;
+                height: 38px;
+                border-radius: 100%;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+    
+                &:nth-child(1){
+                    background-color: #0866FF;
+                }
+                &:nth-child(2){
+                    background-color: #1DA1F2;
+                }
+                &:nth-child(3){
+                   background-color: #D06555;
+                }
+                &:nth-child(4){
+                    background-color: #0077B5;
+                }
             }
         }
     }

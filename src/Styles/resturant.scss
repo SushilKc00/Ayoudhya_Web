@@ -6,7 +6,7 @@
     .our_resturant_banner{
         position: relative;
         width: 100%;
-        min-height: 60vh;
+        min-height: 55vh;
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 2;
@@ -29,27 +29,16 @@
             letter-spacing: 0.1rem;
             color: white;
             text-transform: uppercase;
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            font-weight: 600;
-            font-family: "Raleway",sans-serif;
             @media (max-width:768px) {
-                 font-size: 2.8rem;
-                 margin-top: 2rem;
+                 font-size: 2.2rem;
             }
         }
     }
     .resturant_container{
-        width: 86.88%;
-        margin: 0 auto;
-        padding: 8rem 0; 
         font-family: "";
-        @media (max-width:1300px) {
+        @media (max-width:500px) {
             width: 100%;
-            padding: 8rem 1.25rem;
+            padding: 3rem 1.25rem;
          }
         .our_resturant{
             font-family: "Lato";

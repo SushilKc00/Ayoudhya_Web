@@ -69,15 +69,14 @@ const roomServicesData = [
 export const RoomSecond = () => {
   return (
     <div className="rooms_another_section">
-      <Header />
-
       <div
         className="paralax_container"
         style={{
           backgroundImage: `url(${roomDetailBackgroundImage})`,
         }}
       >
-        <div>
+        <Header Color={"white"} />
+        <div className=" h-[40vh] flex items-center max-w-[1320px] m-auto py-4 px-2">
           <div>
             <h2 className="text-white sm:text-7xl text-5xl ">Single Room</h2>
             <p className="mt-8 text-2xl text-white">
@@ -87,8 +86,8 @@ export const RoomSecond = () => {
         </div>
       </div>
 
-      <div className="xl:w-[80%] m-auto flex md:flex-row flex-col xl:px-0 px-5 room_another_container gap-6">
-        <div className="xl:w-[70%]">
+      <div className="max-w-[1320px] m-auto flex md:flex-row flex-col px-2 py-[8rem] room_another_container gap-6">
+        <div className="lg:w-[70%] w-[100%]">
           <div className="swiper_area">
             <RoomsSwiper images={roomPreviewImages} />
             {/* <div className="flex gap-10 my-8">
@@ -105,6 +104,7 @@ export const RoomSecond = () => {
               ))}
             </div> */}
           </div>
+
           <div className="about_hotel mt-24">
             <h2 className="text-6xl">About Hotel Awadh Vilas</h2>
             <p className="text-gray-600 md:text-[1.5rem] mt-8 text-xl py-2 text-justify">
@@ -158,7 +158,7 @@ export const RoomSecond = () => {
             <h2 className="text-5xl tracking-[0.1rem] uppercase font-semibold">
               Similar Rooms
             </h2>
-            <div className="flex lg:flex-row flex-col gap-5 mt-20">
+            <div className="flex lg:flex-row flex-col gap-5 mt-20 relative z-[-1]">
               {roomImages.map((d) => (
                 <RoomsCards roomDetails={d} />
               ))}

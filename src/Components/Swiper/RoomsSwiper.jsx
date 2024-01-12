@@ -70,7 +70,7 @@ export default function RoomsSwiper({ images }) {
             slidesPerView: 5,
           },
           1024: {
-            slidesPerView: 6,
+            slidesPerView: 7,
           },
         }}
       >
