@@ -60,6 +60,7 @@ export const Contact = () => {
             />
           </div>
         </section>
+
         <section className="conatct-conten lg:py-24 bg-slate-50">
           <div className="lg:flex gap-3 px-3 py-4 xl:w-[77%]  m-auto mt-8">
             <div className="lg:w-[60%] p-3">
@@ -68,6 +69,8 @@ export const Contact = () => {
                   contact us
                 </h2>
               </div>
+              {/* ------------------------------form ----------------------------------------------------- */}
+
               <form>
                 <div className="mt-7 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div className="sm:col-span-3">
@@ -170,6 +173,7 @@ export const Contact = () => {
                   </button>
                 </div>
               </form>
+              {/* ------------------------------form ----------------------------------------------------- */}
             </div>
             <div className="lg:w-[40%] p-3 lg:mt-0 mt-10">
               <div className="flex items-start  lg:pb-4">
