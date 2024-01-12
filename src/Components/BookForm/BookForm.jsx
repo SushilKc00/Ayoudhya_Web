@@ -2,7 +2,7 @@ import React from "react";
 
 export const BookForm = () => {
   return (
-    <div>
+    <div className="shadow-2xl rounded-lg">
       <form action="" className="bg-white flex flex-col gap-5 pb-8 rounded-lg">
         <h2 className="bg-gray-200 text-center p-3 text-4xl font-bold rounded-lg">
           Book Online

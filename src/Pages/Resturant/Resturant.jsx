@@ -344,11 +344,11 @@ export const Resturant = () => {
         <h2>welcome to Hotel Awadh Vilas</h2>
       </div>
       <div className="resturant_container">
-        <div className="our_resturant flex lg:flex-row flex-col gap-4">
+        <div className="our_resturant flex lg:flex-row flex-col gap-10">
           <div className="left xl:w-[60%] lg:w-[50%]">
             <h2 className="text-5xl font-bold text-gray-600">OUR RESTAURANT</h2>
             <p
-              className="text-2xl mt-10 text-gray-600"
+              className="text-2xl mt-10 text-gray-600 text-justify"
               style={{
                 lineHeight: "2.6rem",
               }}
@@ -356,6 +356,23 @@ export const Resturant = () => {
               Our menu spotlights a delicious food collection of Noodles and
               Soup. Soft Drink, Breakfast, Paneer, Sweet Dish, Thali and a wide
               range of mouth-watering items grace our menu all the time.
+            </p>
+            <p className="text-2xl text-gray-600 leading-[2.6rem] mt-8 text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo
+              laboriosam tempore sint cumque, repellat doloribus officiis
+              inventore ducimus earum, iure quam dignissimos, enim doloremque
+              aliquam. Consequatur fugit eius perferendis. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Porro quo laboriosam tempore
+              sint cumque, repellat doloribus officiis inventore ducimus earum,
+              iure quam dignissimos, enim doloremque aliquam. Consequatur fugit
+              eius perferendis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Porro quo laboriosam tempore sint cumque,
+              repellat doloribus officiis inventore ducimus earum, iure quam
+              dignissimos, enim doloremque aliquam. Consequatur fugit eius
+              perferendis. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Porro quo laboriosam tempore sint cumque, repellat doloribus
+              officiis inventore ducimus earum, iure quam dignissimos, enim
+              doloremque aliquam. Consequatur fugit eius perferendis.
             </p>
           </div>
           <div className="right xl:w-[40%] lg:w-[50%] grid grid-cols-2 gap-4 ">
@@ -368,23 +385,7 @@ export const Resturant = () => {
             })}
           </div>
         </div>
-        <p className="text-2xl text-gray-600 leading-[2.6rem] mt-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo
-          laboriosam tempore sint cumque, repellat doloribus officiis inventore
-          ducimus earum, iure quam dignissimos, enim doloremque aliquam.
-          Consequatur fugit eius perferendis. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Porro quo laboriosam tempore sint
-          cumque, repellat doloribus officiis inventore ducimus earum, iure quam
-          dignissimos, enim doloremque aliquam. Consequatur fugit eius
-          perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Porro quo laboriosam tempore sint cumque, repellat doloribus officiis
-          inventore ducimus earum, iure quam dignissimos, enim doloremque
-          aliquam. Consequatur fugit eius perferendis. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Porro quo laboriosam tempore sint
-          cumque, repellat doloribus officiis inventore ducimus earum, iure quam
-          dignissimos, enim doloremque aliquam. Consequatur fugit eius
-          perferendis.
-        </p>
+
         <div className="our_menu">
           <h2 className="text-5xl uppercase font-bold text-gray-600">
             Our Menu
@@ -395,7 +396,10 @@ export const Resturant = () => {
                 return <MenuCard menuDetails={d} />;
               })}
             </div>
-            <div className="lg:w-[50%] shadow-lg shadow-gray-500 px-3 py-2">
+            <div className="lg:w-[50%] shadow-lg shadow-gray-500 px-3 py-12">
+              <h2 className="text-center text-4xl mb-5 font-semibold">
+                Order Form
+              </h2>
               <small className="text-lg">
                 <span className="text-red-600">*</span> Select Items from Menu
                 Below
@@ -404,6 +408,74 @@ export const Resturant = () => {
                 {allMenus.map((m) => (
                   <DropDown m={m} />
                 ))}
+              </div>
+              <div className="form_container">
+                <form action="">
+                  <div className="input_area">
+                    <label htmlFor="">
+                      <span>*</span> Full Name
+                    </label>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Your Name"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="input_area">
+                    <label htmlFor="">Eamil Id</label>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Email Address"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="input_area">
+                    <label htmlFor="">
+                      <span>*</span> Mobile Number
+                    </label>
+                    <input
+                      type="number"
+                      name=""
+                      id=""
+                      placeholder="Your Name"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="input_area">
+                    <label htmlFor="">
+                      <span>*</span> Delivery Address
+                    </label>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Delivery Address"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="input_area">
+                    <label htmlFor="">Instructions</label>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Instructions"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="w-[80%] flex gap-10">
+                    <button className="bg-[#DEB666] hover:bg-white transition-all duration-300">
+                      Order
+                    </button>
+                    <button className="bg-white hover:bg-[#DEB666] transition-all duration-300">
+                      Cancel
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -439,7 +511,7 @@ const DropDown = ({ m }) => {
               <span>₹ {s.price}</span>
             </div>
             <div>
-              <button className="text-2xl bg-[#7F252A] text-white px-6 py-3 mt-5">
+              <button className="text-2xl bg-[#7F252A] rounded-md text-white px-10 py-2 mt-5">
                 Add
               </button>
             </div>
