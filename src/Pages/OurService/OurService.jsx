@@ -1,78 +1,37 @@
 import React from "react";
 import "./ourservice.css";
 import { Header } from "../../Components/Header/Header";
-import FacilitiesCard from "../../Components/Cards/FacilitiesCard";
-import Food from "../../assets/svg/food-svg.svg";
-import AC from "../../assets/svg/ac-svg.svg";
-import Room from "../../assets/svg/Washroom.svg";
-import Water from "../../assets/svg/Water-Supply.svg";
-import CCTV from "../../assets/svg/CCTV.svg";
-import Wifi from "../../assets/svg/wifi.svg";
-import HouseKeeping from "../../assets/svg/house-keeping.svg";
-import parking from "../../assets/svg/parking.svg";
 import BannerImg from "../../assets/ayodhya.png";
+import { Link } from "react-router-dom";
+import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
+import ChooseUs from "../../Components/Common-components/ChooseUs";
 
 export const OurService = () => {
+
+  const email= "Contact@hotelawadhvilasayodhya.com";
+  const number = "+91 9120053008"
   const imgUrl = {
     backgroundImage: `url(${BannerImg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
-  const cardData = [
-    {
-      title: "supper delicious food",
-      description: "Take Healthy and Tasty Food of your choice.",
-      icon: Food,
-    },
-    {
-      title: "AC and Non AC room 24x7 Electricity supply",
-      description:
-        "As your wish we provide Ac and Non AC rooms at fair prices.",
-      icon: AC,
-    },
-    {
-      title: "room with attached washroom",
-      description: "As per the requirement you can use these facilities.",
-      icon: Room,
-    },
-    {
-      title: "hot and cold water 24x7 water supply",
-      description:
-        "As per the weather requirements we provide hot and cold water.",
-      icon: Water,
-    },
-    {
-      title: "full CCTV security",
-      description: "CCTV installed for security purposers.",
-      icon: CCTV,
-    },
-    {
-      title: "Parging space",
-      description: "As per the requirement you can use these facilities.",
-      icon: parking,
-    },
-    {
-      title: "24x7 Fiber Wifi",
-      description: "Fast 40Mbps speed with limited users provided.",
-      icon: Wifi,
-    },
-    {
-      title: "housekeeping",
-      description: "Daily cleaning of rooms and verandah",
-      icon: HouseKeeping,
-    },
-  ];
+  
+
+ 
+
   return (
     <div className="bg-gray-700 our-service-section">
-      
       <section
-        className="border-yellow-800 border-b-2 bg-slate-100 w-[100%] h-[100%] "
+        className="border-yellow-800 border-b-4 bg-slate-100 w-[100%] h-[100%] "
         style={imgUrl}
       >
-        <div className="w-[100%] h-[100%] z-0" style={{background:"rgba(252,237,250,.5)"}}>
-        <Header />
-          <div className="pt-24 max-w-[1320px] m-auto border-yellow-800 border-b-4 z-10 ">
+        <div
+          className="w-[100%] h-[100%] z-0 "
+          style={{ background: "rgba(252,237,250,.6)" }}
+        >
+          <Header />
+          <div className=" max-w-[1320px] m-auto flex flex-col items-center justify-center border-yellow-800 border-b-4 z-10 min-h-[40vh]">
             <div>
               <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl md:text-6xl text-3xl capitalize text-yellow-800">
                 We are awesome
@@ -87,19 +46,35 @@ export const OurService = () => {
         </div>
       </section>
       {/* --------------------------card section----------------------- */}
-      <section className="bg-slate-100 lg:py-28 py-6">
-        <div className="m-auto max-w-[1320px] grid lg:grid-cols-4 md:grid-cols-2 gap-5 lg:gap-y-12 p-2">
-          {cardData.map((item, i) => (
-            <FacilitiesCard
-              key={i}
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
+      <FacilitiesCardComponent />
+      {/* --------------------------card section----------------------- */}
+      {/* --------------------------choose-us section----------------------- */}
+      <ChooseUs/>
+      {/* --------------------------choose-us section----------------------- */}
+      {/* --------------------------Hotel Reservation section----------------------- */}
+      <section className="lg:py-14 bg-yellow-700">
+        <div className="max-w-[1320px] flex flex-col items-center justify-center m-auto">
+          <div className="w-[100%] border-b-4 border-yellow-900 pb-4">
+            <h2 className="font-fl-lex font-bold text-yellow-900 lg:text-5xl leading-snug md:text-3xl text-2xl text-center capitalize">
+              Hotel reservation
+            </h2>
+          </div>
+          <div className="pt-3">
+            <h3 className="capitalize font-fl-lex font-semibold text-6xl leading-snug text-center text-white">
+            Extra Perks When You Book Directly With Us
+            </h3>
+          </div>
+          <div className="mt-3">
+            <Link to={`mailto:${email}`}
+            className="text-white flex items-center justify-center text-3xl font-medium bg-yellow-950 px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2 border-yellow-950">{email}</Link>
+          </div>
+          <div className="mt-3">
+            <Link to={`tel:${email}`}
+            className="text-white flex items-center justify-center text-3xl font-medium bg-yellow-950 px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2 border-yellow-950">{number}</Link>
+          </div>
         </div>
       </section>
-      {/* --------------------------card section----------------------- */}
+      {/* --------------------------Hotel Reservation section----------------------- */}
     </div>
   );
 };

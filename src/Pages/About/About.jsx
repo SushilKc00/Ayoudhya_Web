@@ -2,6 +2,8 @@ import React from "react";
 import { Header } from "../../Components/Header/Header";
 import aboutimg1 from "../../assets/aboutimg1.png";
 import Number from "../../Components/Number";
+import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
+import ChooseUs from "../../Components/Common-components/ChooseUs";
 
 
 export const About = () => {
@@ -66,6 +68,12 @@ export const About = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <FacilitiesCardComponent />
+      </div>
+      <div>
+        <ChooseUs />
       </div>
     </div>
   );
