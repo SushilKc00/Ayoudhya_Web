@@ -65,7 +65,7 @@ export const Contact = () => {
           <div className="lg:flex gap-3 px-3 py-4 xl:w-[77%]  m-auto mt-8">
             <div className="lg:w-[60%] p-3">
               <div className="flex items-start lg:pb-4">
-                <h2 className="contact-h2-lg text-clr-gray  ff-ral font-bold uppercase">
+                <h2 className="text-clr-gray  font-bold uppercase sm:text-4xl text-[2rem]">
                   contact us
                 </h2>
               </div>
@@ -163,7 +163,7 @@ export const Contact = () => {
                 </div>
                 <div className="mt-5 flex lg:justify-end md:justify-start lg:mr-2">
                   <button
-                    className="py-3 lg:w-max w-[100%] md:w-max px-6 justify-center uppercase text-lg font-semibold btn_bg_color text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
+                    className="py-3 lg:w-max w-[100%] md:w-max px-6 justify-center uppercase text-lg font-semibold btn_bg_color text-white active:scale-90 hover:bg-[#d5b872] flex items-center gap-2 contect-btn"
                     onClick={() => {
                       event.preventDefault();
                     }}
@@ -177,7 +177,7 @@ export const Contact = () => {
             </div>
             <div className="lg:w-[40%] p-3 lg:mt-0 mt-10">
               <div className="flex items-start  lg:pb-4">
-                <h2 className="contact-h2-lg text-clr-gray ff-ral font-bold uppercase ">
+                <h2 className=" sm:text-4xl text-[2rem] text-clr-gray ff-ral font-bold uppercase ">
                   get in touch
                 </h2>
               </div>

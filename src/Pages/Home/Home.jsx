@@ -110,7 +110,7 @@ export const Home = () => {
   const [playVideo, SetPlayVideo] = useState(false);
   const { slideIndexValue } = useServiceHook();
 
-  // useScrollTop();
+  useScrollTop();
   return (
     <div>
       {/* WELCOME SECTION....... */}

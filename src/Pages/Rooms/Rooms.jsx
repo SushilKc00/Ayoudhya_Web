@@ -14,6 +14,7 @@ import { FaWifi } from "react-icons/fa";
 import { FaDesktop } from "react-icons/fa";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
+import useScrollTop from "../../Components/useScrollTop";
 
 export const Rooms = () => {
   // -------banner img--------- //
@@ -69,6 +70,7 @@ export const Rooms = () => {
     },
   ];
 
+  useScrollTop();
   return (
     <div>
       <section className="w-[100%] h-[100%]" style={imgurl}>
@@ -109,7 +111,7 @@ export const Rooms = () => {
         }}
       >
         {roomCardData.map((item, i) => (
-          <Link to={`/roomdetails/${i}`}>
+          <Link to="#">
             <div
               className="max-w-[1320px] h-max m-auto lg:flex mb-5 shadow-xl px-2  py-2 lg:py-0"
               key={i}
@@ -144,19 +146,17 @@ export const Rooms = () => {
                 </div>
                 <div className="flex flex-col items-center justify-between lg:w-[25%] md:w-[25%] px-2 lg:py-5 md:py-2 py-2 ">
                   <div>
-
-                  
-                  <p className="room-price text-4xl text-slate-600 lg:mb-8 md:mb-8 mb-4 flex items-center gap-1 p-2">
-                    <span className="sr-only">room price</span>
-                    <MdOutlineCurrencyRupee className="text-4xl" />
-                    {item.price}
-                  </p>
-                  <p className="uppercase text-3xl p-3">{item.time}</p>
+                    <p className="room-price text-4xl text-slate-600 lg:mb-8 md:mb-8 mb-4 flex items-center gap-1 p-2">
+                      <span className="sr-only">room price</span>
+                      <MdOutlineCurrencyRupee className="text-4xl" />
+                      {item.price}
+                    </p>
+                    <p className="uppercase text-3xl p-3">{item.time}</p>
                   </div>
                   <div className="mt-2 lg:mt-0 md:mt-0">
                     <Link
-                      to="#"
-                      className="uppercase py-2 px-10 text-3xl btn_bg_color text-white active:scale-90 hover:bg-yellow-600"
+                      to=""
+                      className="uppercase py-2 px-10 text-3xl btn_bg_color text-white active:scale-95 hover:bg-[#d5b872]"
                     >
                       book now
                     </Link>

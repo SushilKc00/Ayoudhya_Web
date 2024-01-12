@@ -19,10 +19,11 @@ function App() {
             <Route path="/about_us" element={<About />} />
             <Route path="/our_service" element={<OurService />} />
             <Route path="/rooms" element={<Rooms />} />
-            <Route path="/roomdetails/:id" element={<RoomSecond />} />
+            {/* <Route path="/roomdetails/:id" element={<RoomSecond />} /> */}
             {/* <Route path="/room-Details" element={<RoomSecond />} /> */}
             <Route path="/resturant" element={<Resturant />} />
             <Route path="/contact_us" element={<Contact />} />
+            {/* <Route path="*" element={<h4> Page Not Found</h4>} /> */}
           </Routes>
         </ServiceContextProvider>
         <Footer />

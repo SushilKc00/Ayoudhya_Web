@@ -9,7 +9,7 @@ import useScrollTop from "../../Components/useScrollTop";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 
 export const OurService = () => {
-  // useScrollTop();
+  useScrollTop();
 
   const email = "Contact@hotelawadhvilasayodhya.com";
   const number = "+91 9120053008";
@@ -55,32 +55,34 @@ export const OurService = () => {
       <ChooseUs />
       {/* --------------------------choose-us section----------------------- */}
       {/* --------------------------Hotel Reservation section----------------------- */}
-      <section className="lg:py-14 md:py-9 py-4 bg-yellow-700">
+      <section className="lg:py-14 md:py-9 py-4 bg-white ">
         <div className="max-w-[1320px] flex flex-col items-center justify-center m-auto">
           <div className="w-[100%] border-b-4 border-yellow-900 pb-4">
-            <h2 className="font-fl-lex font-bold text-yellow-900 lg:text-5xl md:text-4xl leading-snug  text-3xl text-center capitalize">
+            <h2 className="font-fl-lex font-bold text-[#4B5563] uppercase lg:text-5xl md:text-4xl leading-snug  text-3xl text-center py-6">
               Hotel reservation
             </h2>
           </div>
           <div className="pt-3">
-            <h3 className="capitalize font-fl-lex font-semibold lg:text-6xl md:text-5xl text-3xl leading-snug text-center text-white">
+            <h3 className="capitalize font-fl-lex font-semibold lg:text-6xl md:text-5xl text-3xl leading-snug text-center text-[#ACA3AF] py-8">
               Extra Perks When You Book Directly With Us
             </h3>
           </div>
           <div className="mt-3">
             <Link
               to={`mailto:${email}`}
-              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium btn_bg_color px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2"
+              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium btn_bg_color px-6 py-3 hover:bg-[#d5b872] active:scale-90 rounded-xl border-2"
             >
-              <AiOutlineMail />{email}
+              <AiOutlineMail />
+              {email}
             </Link>
           </div>
           <div className="mt-3">
             <Link
               to={`tel:${email}`}
-              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium btn_bg_color px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2 "
+              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium btn_bg_color px-6 py-3 hover:bg-[#d5b872] active:scale-90 rounded-xl border-2 "
             >
-              <AiOutlinePhone />{number}
+              <AiOutlinePhone />
+              {number}
             </Link>
           </div>
         </div>

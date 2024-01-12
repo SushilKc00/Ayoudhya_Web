@@ -311,7 +311,7 @@ const allMenus = [
 ];
 
 export const Resturant = () => {
-  // useScrollTop();
+  useScrollTop();
   return (
     <div className="resturant_section">
       <div
@@ -334,14 +334,14 @@ export const Resturant = () => {
             <p
               className="sm:text-2xl text-[1.2rem] sm:mt-10 mt-5 text-gray-600 text-justify"
               style={{
-                lineHeight: "2.6rem",
+                lineHeight: "2rem",
               }}
             >
               Our menu spotlights a delicious food collection of Noodles and
               Soup. Soft Drink, Breakfast, Paneer, Sweet Dish, Thali and a wide
               range of mouth-watering items grace our menu all the time.
             </p>
-            <p className="sm:text-2xl text-[1.2rem] text-gray-600 sm:leading-[2.8rem] leading-[2.4rem] mt-8 text-justify">
+            <p className="sm:text-2xl text-[1.2rem] text-gray-600 sm:leading-[2.8rem] leading-[2.4rem] mt-4 text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quo
               laboriosam tempore sint cumque, repellat doloribus officiis
               inventore ducimus earum, iure quam dignissimos, enim doloremque
@@ -394,7 +394,12 @@ export const Resturant = () => {
                 ))}
               </div>
               <div className="form_container">
-                <form action="">
+                <form
+                  action=""
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                  }}
+                >
                   <div className="input_area">
                     <label htmlFor="">
                       <span>*</span> Full Name
@@ -452,10 +457,10 @@ export const Resturant = () => {
                     />
                   </div>
                   <div className="w-[80%] flex gap-10">
-                    <button className="bg-[#DEB666] hover:bg-white transition-all duration-300">
+                    <button className="bg-[#DEB666] hover:bg-white transition-all duration-300 active:scale-95">
                       Order
                     </button>
-                    <button className="bg-white hover:bg-[#DEB666] transition-all duration-300">
+                    <button className="bg-white hover:bg-[#DEB666] transition-all duration-300 active:scale-95">
                       Cancel
                     </button>
                   </div>

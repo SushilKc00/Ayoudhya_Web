@@ -46,6 +46,7 @@ export default function RoomsSwiper({ images }) {
           <SwiperSlide>
             <img
               src={i}
+              alt={i}
               className="cursor-pointer"
               onClick={() => {
                 setPreviewImage(true);
@@ -82,9 +83,10 @@ export default function RoomsSwiper({ images }) {
       </Swiper>
       {previewImage && (
         <div className="fixed top-0 left-0 w-[100%] h-[100vh] bg-[#000000c6] z-30 flex flex-col justify-center items-center">
-          <div>
+          <div className="relative bg-green-500 w-[80%] m-auto">
+            <img src={images[imgIndex]} alt="" />
             <p
-              className="text-4xl text-white bg-slate-900 w-20 h-20 flex justify-center items-center rounded-full mb-4 cursor-pointer"
+              className="text-4xl text-white bg-slate-900 w-20 h-20 flex justify-center items-center rounded-full mb-4 cursor-pointer absolute top-[-13%] right-[-3%]"
               onClick={() => {
                 setPreviewImage(false);
                 window.document.body.classList.remove("bg_salmon");
@@ -92,9 +94,6 @@ export default function RoomsSwiper({ images }) {
             >
               X
             </p>
-          </div>
-          <div>
-            <img src={images[imgIndex]} alt="" />
           </div>
           <span
             className="fixed top-[50%] left-[2rem] p-4 bg-[#DEB666] cursor-pointer rounded-lg"
