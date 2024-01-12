@@ -122,7 +122,7 @@ export const Home = () => {
           }}
         >
           <Header Color={"white"} />
-          <div className="lg:flex gap-3 xl:w-[80%] m-auto mt-28 xl:p-0 px-5">
+          <div className="lg:flex gap-3 xl:w-[86.88%] m-auto mt-28 xl:p-0 px-5">
             <div className="lg:w-[70%]">
               <h2 className="sm:text-6xl text-4xl text-white font-semibold leading-snug">
                 Welcome to Hotel Awadh Vilas & Restaurant
@@ -170,7 +170,7 @@ export const Home = () => {
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit. Restaurant
           </p>
-          <div className="flex lg:flex-row flex-col gap-5">
+          <div className="flex lg:flex-row flex-wrap flex-col gap-5 justify-center">
             {roomImages.map((d) => {
               return <RoomsCards roomDetails={d} />;
             })}

@@ -2,7 +2,7 @@ import React from "react";
 import { Header } from "../../Components/Header/Header";
 import aboutimg1 from "../../assets/aboutimg1.png";
 import useScrollTop from "../../Components/useScrollTop";
-import aboutBackgroundImage from "../../assets/videoimg.jpg";
+import aboutBackgroundImage from "../../assets/aboutback.jpg";
 import Number from "../../Components/Number";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
@@ -23,11 +23,14 @@ export const About = () => {
             <h2 className="text-white sm:text-7xl text-5xl ">
               About Awadh Vilas
             </h2>
+            <p className="mt-8 text-2xl text-white">
+              Home / <span className="text-[#D6B519]">About Awadh Vilas</span>
+            </p>
           </div>
         </div>
       </div>
       <div className="about_content">
-        <div className="xl:w-[80%] flex lg:flex-row flex-col gap-10 m-auto px-4">
+        <div className="xl:w-[86.88%] flex lg:flex-row flex-col gap-10 m-auto px-4">
           <div className="lg:w-[50%] w-[100%]">
             <h2 className="text-gray-900 text-6xl mb-6">
               Hotel Awadh Vilas - Since 1989

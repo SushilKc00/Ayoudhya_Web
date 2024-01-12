@@ -9,11 +9,12 @@ import { MenuCard } from "../../Components/Cards/MenuCard";
 import menuimg1 from "../../assets/menuimg1.webp";
 import menuimg2 from "../../assets/menuimg2.jpg";
 import menuimg3 from "../../assets/menuimg3.jpg";
-import restBackgroundImage from "../../assets/restbackground.png";
+import restBackgroundImage from "../../assets/restback.jpg";
 
 import useScrollTop from "../../Components/useScrollTop";
 
 const restaurantImage = [resturant1, resturant2, resturant3, resturant4];
+
 const menuImage = [
   {
     name: "Deluxe Thali",
@@ -68,7 +69,203 @@ const allMenus = [
         price: "50",
       },
       {
-        name: "Daal plain",
+        name: "Daal Jeera",
+        price: "50",
+      },
+      {
+        name: "Daal Fry",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "Breakfast",
+    subName: [
+      {
+        name: "Plain Paratha",
+        price: "50",
+      },
+      {
+        name: "Paneer Pakoda (8 Piece)",
+        price: "50",
+      },
+      {
+        name: "Dahi",
+        price: "50",
+      },
+      {
+        name: "Onion Pakoda (10 Piece)",
+        price: "50",
+      },
+      {
+        name: "Poori Sabji (6 Piece)",
+        price: "50",
+      },
+      {
+        name: "Onion Paratha",
+        price: "50",
+      },
+      {
+        name: "Aaloo Paratha",
+        price: "50",
+      },
+      {
+        name: "Lachha Paratha",
+        price: "50",
+      },
+      {
+        name: "Paneer Paratha",
+        price: "50",
+      },
+      {
+        name: "Mix Paratha",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "paneer",
+    subName: [
+      {
+        name: "Malai Kofta",
+        price: "50",
+      },
+      {
+        name: "Saahi Paneer",
+        price: "50",
+      },
+      {
+        name: "Saahi Paneer",
+        price: "50",
+      },
+      {
+        name: "Kadahi Paneer",
+        price: "50",
+      },
+      {
+        name: "Handi Paneer",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "Vegitable",
+    subName: [
+      {
+        name: "Aaloo Dum Masala",
+        price: "50",
+      },
+      {
+        name: "Gobhi Matar",
+        price: "50",
+      },
+      {
+        name: "Aaloo Zira",
+        price: "50",
+      },
+      {
+        name: "Aaloo Parvar",
+        price: "50",
+      },
+      {
+        name: "MixVeg",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "Mushroom",
+    subName: [
+      {
+        name: "Chilli Mashroom",
+        price: "50",
+      },
+      {
+        name: "Mushroom Do Pyaza",
+        price: "50",
+      },
+      {
+        name: "Mushroom Masala",
+        price: "50",
+      },
+      {
+        name: "Matar Mushroom Masala",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "Raita",
+    subName: [
+      {
+        name: "Mix Raita",
+        price: "50",
+      },
+      {
+        name: "Boondi Raita",
+        price: "50",
+      },
+      {
+        name: "Plain Raita",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "Sweet Dish",
+    subName: [
+      {
+        name: "Gulab Jamun",
+        price: "50",
+      },
+      {
+        name: "Rasgulla",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "Rice",
+    subName: [
+      {
+        name: "Paneer Biryani",
+        price: "50",
+      },
+      {
+        name: "Jeera Rice",
+        price: "50",
+      },
+      {
+        name: "Matar Pulao",
+        price: "50",
+      },
+      {
+        name: "Paneer Pulao",
+        price: "50",
+      },
+      {
+        name: "Navratan Pulao",
+        price: "50",
+      },
+    ],
+  },
+  {
+    name: "Roti & Naan",
+    subName: [
+      {
+        name: "Tawa Roti Butter",
+        price: "50",
+      },
+      {
+        name: "Laccha Paratha",
+        price: "50",
+      },
+      {
+        name: "Tawa Roti Plain",
+        price: "50",
+      },
+      {
+        name: "Missi Roti",
         price: "50",
       },
       {
@@ -78,251 +275,35 @@ const allMenus = [
     ],
   },
   {
-    name: "Daal",
+    name: "Soup",
     subName: [
       {
-        name: "Daal Tadka",
+        name: "Sweet Corn Soup",
         price: "50",
       },
       {
-        name: "Dal Makani",
+        name: "Veg Soup",
         price: "50",
       },
       {
-        name: "Daal plain",
+        name: "Manchow Soup",
         price: "50",
       },
       {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
+        name: "Veg Hot & Sour",
         price: "50",
       },
     ],
   },
   {
-    name: "Daal",
+    name: "Papad",
     subName: [
       {
-        name: "Daal Tadka",
+        name: "Papad Fry (1 Piece)",
         price: "50",
       },
       {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-    ],
-  },
-  {
-    name: "Daal",
-    subName: [
-      {
-        name: "Daal Tadka",
-        price: "50",
-      },
-      {
-        name: "Dal Makani",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
-        price: "50",
-      },
-      {
-        name: "Daal plain",
+        name: "Papad dry (1 Piece)",
         price: "50",
       },
     ],

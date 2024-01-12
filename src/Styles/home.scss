@@ -38,13 +38,16 @@
         letter-spacing: 0.2rem;
     }
     .favorite_rooms{
-        width: 80%;
+        width: 86.88%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: 3.2rem;
         .rooms_cards{
-            width: 100%;
+            width: 430px;
+            @media (max-width:500px) {
+              width: 100%;
+            }
             img{
                 width: 100%;
             }
@@ -59,7 +62,7 @@
         letter-spacing: 0.2rem;
     }
      .service_container{
-        width: 80%;
+        width: 86.88%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -75,11 +78,10 @@
      padding: 8rem 0;
      h2{
         font-family: "Raleway",sans-serif;
-     
         letter-spacing: 0.2rem;
     }
      .news_container{
-        width: 80%;
+        width: 86.88%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -149,7 +151,7 @@
         letter-spacing: 0.2rem;
     }
     .contact_container{
-       width: 80%;
+        width: 86.88%;
        margin: 0 auto;
        display: flex;
        flex-direction: column;
@@ -165,7 +167,7 @@
     padding: 10rem 0;
    
     .visit_place_container{
-       width: 80%;
+        width: 86.88%;
        margin: 0 auto;
        display: flex;
        flex-direction: column;

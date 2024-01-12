@@ -80,6 +80,9 @@ export const RoomSecond = () => {
         <div>
           <div>
             <h2 className="text-white sm:text-7xl text-5xl ">Single Room</h2>
+            <p className="mt-8 text-2xl text-white">
+              Home / Rooms / <span className="text-[#DEB666]">Single Room</span>
+            </p>
           </div>
         </div>
       </div>
@@ -138,7 +141,7 @@ export const RoomSecond = () => {
             </h2>
             <div className="grid grid-cols-3 mt-20 gap-y-5 ">
               {roomServicesData.map((s) => (
-                <p className="text-xl font-semibold flex gap-2 items-center capitalize">
+                <p className="md:text-xl text-lg font-semibold flex gap-2 items-center capitalize">
                   {s.isAvailable ? (
                     <IoCheckmark size={17} className="text-green-700" />
                   ) : (

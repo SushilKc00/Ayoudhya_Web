@@ -60,11 +60,19 @@ export default function RoomsSwiper({ images }) {
       <Swiper
         onSwiper={setThumbsSwiper}
         spaceBetween={12}
-        slidesPerView={6}
+        slidesPerView={4}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper"
+        breakpoints={{
+          768: {
+            slidesPerView: 5,
+          },
+          1024: {
+            slidesPerView: 6,
+          },
+        }}
       >
         {images?.map((i) => (
           <SwiperSlide>
