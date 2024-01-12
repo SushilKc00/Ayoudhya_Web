@@ -58,7 +58,7 @@ function FacilitiesCardComponent() {
       ];
   return (
     <section
-        className=" lg:py-28 py-6"
+        className=" lg:py-28 md:py-6 py-0"
         style={{
           backgroundImage: `url(${BgImg})`,
           backgroundPosition: "center",

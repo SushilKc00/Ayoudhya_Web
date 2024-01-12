@@ -57,7 +57,7 @@ function ChooseUs() {
     },
   ];
   return (
-    <section className="w-[100%] h-[100%]">
+    <section className="w-[100%] h-[100%] ">
       <div
         className="h-[100%] w-[100%]"
         style={{
@@ -68,7 +68,7 @@ function ChooseUs() {
         }}
       >
         <div className="bg-black/70 w-[100%] h-[100%]">
-          <div className="lg:py-28">
+          <div className="xl:py-28 lg:py-12 md:py-8">
             <div className="max-w-[1320px] m-auto p-2 flex flex-col items-center justify-center ">
               <div className="">
                 <h2 className="text-center lg:text-7xl md:text-6xl text-5xl capitalize text-yellow-800 font-semibold font-fl-BSC">
@@ -76,30 +76,30 @@ function ChooseUs() {
                 </h2>
               </div>
               <div className="max-w-[60%]">
-                <p className="text-center lg:text-8xl font-semibold capitalize font-fl-lex text-slate-200">
+                <p className="text-center lg:text-8xl md:text-6xl text-3xl font-semibold capitalize font-fl-lex text-slate-200">
                   closest from Famous Places In Ayodha ji
                 </p>
               </div>
               <div className="boder-b-4 border-yellow-500 max-w-[40px] h-5"></div>
-              <div className="mt-7 min-w-[1320px] w-[100%] lg:flex">
-                <div className="bg-white p-5 w-[60%] h-max">
+              <div className="mt-7 max-w-[1320px] w-[100%] lg:flex">
+                <div className="bg-white p-5 lg:w-[60%] h-max">
                   {destination.map((item, i) => (
                     <div
                       className="flex gap-2 border-dotted border-b-2 border-yellow-800 w-[100%] pb-2 mb-3"
                       key={i}
                     >
-                      <div className="icon text-3xl text-yellow-800">
+                      <div className="icon lg:text-3xl md:text-2xl text-xl text-yellow-800">
                         {item.icon}
                       </div>
                       <div className="">
-                        <h3 className="font-normal text-3xl font-fl-lex">
+                        <h3 className="font-normal lg:text-3xl md:text-2xl text-xl font-fl-lex">
                           {item.destinationName} - {item.destinationRange}
                         </h3>
                       </div>
                     </div>
                   ))}
                 </div>
-                <div className="md:w-[40%] max-h-[550px] p-3 flex items-center justify-center">
+                <div className="lg:w-[40%] max-h-[550px] p-3 flex items-center justify-center">
                   <img
                     src={Temple1}
                     alt="temple"
