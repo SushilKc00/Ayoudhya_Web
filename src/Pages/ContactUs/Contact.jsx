@@ -12,6 +12,7 @@ import Web from "../../assets/svg/browser-web-internet-network-svgrepo-com.svg";
 import Location from "../../assets/svg/map-location-svgrepo-com.svg";
 import { Link } from "react-router-dom";
 import useScrollTop from "../../Components/useScrollTop";
+import { AiOutlinePhone } from "react-icons/ai";
 
 export const Contact = () => {
   const data = [
@@ -153,7 +154,7 @@ export const Contact = () => {
                 </div>
                 <div className="mt-5 flex lg:justify-end md:justify-start lg:mr-2">
                   <button
-                    className="py-3 lg:w-max w-[100%] md:w-max px-6 justify-center uppercase text-lg font-semibold bg-yellow-500 text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
+                    className="py-3 lg:w-max w-[100%] md:w-max px-6 justify-center uppercase text-lg font-semibold btn_bg_color text-white active:scale-90 hover:bg-yellow-600 flex items-center gap-2 contect-btn"
                     onClick={() => {
                       event.preventDefault();
                     }}

@@ -7,22 +7,17 @@ import FacilitiesCardComponent from "../../Components/Common-components/Faciliti
 import ChooseUs from "../../Components/Common-components/ChooseUs";
 import useScrollTop from "../../Components/useScrollTop";
 
-
 export const OurService = () => {
-
   useScrollTop();
 
-  const email= "Contact@hotelawadhvilasayodhya.com";
-  const number = "+91 9120053008"
+  const email = "Contact@hotelawadhvilasayodhya.com";
+  const number = "+91 9120053008";
   const imgUrl = {
     backgroundImage: `url(${BannerImg})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
-  
-
- 
 
   return (
     <div className="bg-gray-700 our-service-section">
@@ -32,11 +27,13 @@ export const OurService = () => {
       >
         <div
           className="w-[100%] h-[100%] z-0 "
-          // style={{ background: `linear-gradient(95deg, rgba(147, 0, 17, 0.50) 0%, rgba(86, 20, 147, 0.50) 100%)` }}
-          style={{ background: "rgba(252,237,250,.6)"}}
+          style={{
+            background: `linear-gradient(95deg, rgba(147, 0, 17, 0.3) 0%, rgba(86, 20, 147, 0.3) 100%)`,
+          }}
+          // style={{ background: "rgba(252,237,250,.6)" }}
         >
-          <Header />
-          <div className=" max-w-[1320px] m-auto flex flex-col items-center justify-center border-yellow-800 border-b-4 z-10 min-h-[40vh]">
+          <Header Color={"white"} />
+          <div className=" max-w-[1320px] m-auto flex flex-col items-center justify-center min-h-[40vh]">
             <div>
               <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl md:text-6xl text-3xl capitalize text-slate-100">
                 We are awesome
@@ -54,7 +51,7 @@ export const OurService = () => {
       <FacilitiesCardComponent />
       {/* --------------------------card section----------------------- */}
       {/* --------------------------choose-us section----------------------- */}
-      <ChooseUs/>
+      <ChooseUs />
       {/* --------------------------choose-us section----------------------- */}
       {/* --------------------------Hotel Reservation section----------------------- */}
       <section className="lg:py-14 bg-yellow-700">
@@ -66,16 +63,24 @@ export const OurService = () => {
           </div>
           <div className="pt-3">
             <h3 className="capitalize font-fl-lex font-semibold text-6xl leading-snug text-center text-white">
-            Extra Perks When You Book Directly With Us
+              Extra Perks When You Book Directly With Us
             </h3>
           </div>
           <div className="mt-3">
-            <Link to={`mailto:${email}`}
-            className="text-white flex items-center justify-center text-3xl font-medium bg-yellow-950 px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2 border-yellow-950">{email}</Link>
+            <Link
+              to={`mailto:${email}`}
+              className="text-white flex items-center justify-center text-3xl font-medium btn_bg_color px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2"
+            >
+              {email}
+            </Link>
           </div>
           <div className="mt-3">
-            <Link to={`tel:${email}`}
-            className="text-white flex items-center justify-center text-3xl font-medium bg-yellow-950 px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2 border-yellow-950">{number}</Link>
+            <Link
+              to={`tel:${email}`}
+              className="text-white flex items-center justify-center text-3xl font-medium btn_bg_color px-6 py-3 hover:text-yellow-900 hover:bg-slate-200 active:scale-90 rounded-xl border-2 "
+            >
+              {number}
+            </Link>
           </div>
         </div>
       </section>

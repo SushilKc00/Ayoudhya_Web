@@ -80,7 +80,7 @@ export const Rooms = () => {
       {/* ------room card------ */}
       <section className="w-[100%] py-12">
         {roomCardData.map((item, i) => (
-          <Link to="/room-Details">
+          <Link to={`/roomdetails/${i}`}>
             <div className="max-w-[1320px] m-auto lg:flex shadow-sm" key={i}>
               <div className="overflow-hidden lg:pb-3 lg:pe-3">
                 <img

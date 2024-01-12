@@ -22,7 +22,7 @@ function App() {
             <Route path="/roomdetails/:id" element={<RoomSecond />} />
             {/* <Route path="/room-Details" element={<RoomSecond />} /> */}
             <Route path="/resturant" element={<Resturant />} />
-            <Route path="/contact-us" element={<Contact />} />
+            <Route path="/contact_us" element={<Contact />} />
           </Routes>
         </ServiceContextProvider>
         <Footer />
