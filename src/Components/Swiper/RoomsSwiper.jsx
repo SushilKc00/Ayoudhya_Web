@@ -50,6 +50,7 @@ export default function RoomsSwiper({ images }) {
               onClick={() => {
                 setPreviewImage(true);
                 setImgIndex(index);
+                window.document.body.classList.add("bg_salmon");
               }}
               key={index}
             />
@@ -72,13 +73,23 @@ export default function RoomsSwiper({ images }) {
         ))}
       </Swiper>
       {previewImage && (
-        <div className="fixed top-0 left-0 w-[100%] h-[100vh] bg-[#000000c6] z-30 flex flex-col items-center justify-center">
-          <p>X</p>
+        <div className="fixed top-0 left-0 w-[100%] h-[100vh] bg-[#000000c6] z-30 flex flex-col justify-center items-center">
+          <div>
+            <p
+              className="text-4xl text-white bg-slate-900 w-20 h-20 flex justify-center items-center rounded-full mb-4 cursor-pointer"
+              onClick={() => {
+                setPreviewImage(false);
+                window.document.body.classList.remove("bg_salmon");
+              }}
+            >
+              X
+            </p>
+          </div>
           <div>
             <img src={images[imgIndex]} alt="" />
           </div>
           <span
-            className="fixed top-[50%] left-[2rem] p-4 bg-[#DEB666] cursor-pointer"
+            className="fixed top-[50%] left-[2rem] p-4 bg-[#DEB666] cursor-pointer rounded-lg"
             onClick={() => {
               slideLeft();
             }}
@@ -86,7 +97,7 @@ export default function RoomsSwiper({ images }) {
             <IoMdArrowDropleftCircle size={20} />
           </span>
           <span
-            className="fixed top-[50%] right-[2rem] p-4 bg-[#DEB666] cursor-pointer"
+            className="fixed top-[50%] right-[2rem] p-4 bg-[#DEB666] cursor-pointer rounded-lg"
             onClick={() => {
               slideRight();
             }}
