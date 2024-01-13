@@ -76,15 +76,19 @@ export const Footer = () => {
             <div className="flex gap-5 md:mt-0 mt-8">
               <div className="social_icons">
                 <Link to="">{<FaFacebookF size={20} />}</Link>
+                <span className="sr-only">Facebook</span>
               </div>
               <div className="social_icons">
                 <Link to="">{<AiOutlineTwitter size={20} />}</Link>
+                <span className="sr-only">Twiter</span>
               </div>{" "}
               <div className="social_icons">
                 <Link to="">{<AiOutlineMail size={20} />}</Link>
+                <span className="sr-only">Mail</span>
               </div>{" "}
               <div className="social_icons">
                 <Link to="">{<FaLinkedin size={20} />}</Link>
+                <span className="sr-only">Linkedin</span>
               </div>{" "}
             </div>
           </div>
