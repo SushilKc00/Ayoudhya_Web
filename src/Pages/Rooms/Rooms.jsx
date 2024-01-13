@@ -82,7 +82,7 @@ export const Rooms = () => {
             }}
           >
             <Header Color={"white"} />
-            <div className="max-w-[1320px] m-auto flex flex-col justify-center items-start px-4 min-h-[40vh]">
+            <div className="max-w-[1320px] m-auto flex flex-col justify-center items-center px-4 min-h-[40vh]">
               <div className="py-5">
                 <h1 className="capitalize text-slate-50 font-normal lg:text-6xl md:text-5xl text-3xl">
                   Rooms view
@@ -153,10 +153,10 @@ export const Rooms = () => {
                     </p>
                     <p className="uppercase text-3xl p-3">{item.time}</p>
                   </div>
-                  <div className="mt-2 lg:mt-0 md:mt-0">
+                  <div className="mt-2 lg:mt-0 md:mt-0 w-[100%] text-center">
                     <Link
                       to=""
-                      className="uppercase py-2 px-10 text-3xl btn_bg_color text-white active:scale-95 hover:bg-[#d5b872]"
+                      className="uppercase py-2 px-10 text-3xl btn_bg_color text-white active:scale-90 hover:bg-[#d5b872]"
                     >
                       book now
                     </Link>

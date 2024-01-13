@@ -47,7 +47,7 @@ export const Contact = () => {
     <div className="bg-gray-200 contact-page">
       <Header Color="bg-white" />
       <main>
-        <section className="map">
+        <section className="map max-w-[1320px] m-auto">
           <div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56987.86494284062!2d82.12938176192195!3d26.78450689100897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a07c51f070563%3A0xd8fde853fd57cbe3!2sAyodhya%20Hotal!5e0!3m2!1sen!2sin!4v1704871639502!5m2!1sen!2sin"
@@ -62,7 +62,7 @@ export const Contact = () => {
         </section>
 
         <section className="conatct-conten lg:py-24 bg-slate-50">
-          <div className="lg:flex gap-3 px-3 py-4 xl:w-[77%]  m-auto mt-8">
+          <div className="lg:flex gap-3 px-3 py-4 max-w-[1320px]  m-auto mt-8">
             <div className="lg:w-[60%] p-3">
               <div className="flex items-start lg:pb-4">
                 <h2 className="text-clr-gray  font-bold uppercase sm:text-4xl text-[2rem]">
