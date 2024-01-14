@@ -2,40 +2,45 @@
     .welcome_container{
         position: relative;
         width: 100%;
-        min-height: 100vh;
+        height: auto;
         background-repeat: no-repeat;
         background-size: cover;
         padding-bottom: 2rem;
         z-index: 2;
+        @media (width<800px) {
+            .form_wrapper{
+                display: none;
+            }
+        }
+        
         &::after{
             content: "";
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.674);
+            // background-color: rgba(0, 0, 0, 0.674);
+            background: linear-gradient(160deg, rgb(7, 0, 1), rgba(47, 3, 89, 0.2));
             top: 0;
             left: 0;
+            opacity: 0.6;
             z-index: -1;
-            animation: dayight 15s linear infinite alternate;
-            @keyframes dayight {
-                0%{
-                    opacity: 0;
+            // animation: dayight 15s linear infinite alternate;
+            // @keyframes dayight {
+            //     0%{
+            //         opacity: 0;
 
-                }
-                100%{
-                    opacity: 1.2;
+            //     }
+            //     100%{
+            //         opacity: 1.2;
 
-                }
-            }
+            //     }
+            // }
         }
+     
     }
 }
 .rooms_section{
     background-color: #ffffff;
-    padding: 8rem 0;
-    @media (max-width:500px) {
-        padding: 0rem 0;
-    }
     h2{
         font-family: "Raleway",sans-serif;
         letter-spacing: 0.2rem;
@@ -60,10 +65,6 @@
 }
 .service_section{
      background-color: #F5F5F5;
-     padding: 8rem 0;
-     @media (max-width:500px) {
-        padding: 1.8rem 0;
-    }
      h2{
         font-family: "Raleway",sans-serif;
         letter-spacing: 0.2rem;
@@ -83,10 +84,6 @@
 }
 .news_section{
     background-color: #ffffff;
-     padding: 8rem 0;
-     @media (max-width:500px) {
-        padding: 4rem 0;
-    }
      h2{
         font-family: "Raleway",sans-serif;
         letter-spacing: 0.2rem;
@@ -97,11 +94,6 @@
         gap: 3.2rem;
         @media (max-width:500px) {
             gap: 1.4rem;
-        }
-        @media (max-width:1200px) {
-             width: 100%;
-             padding: 0 2rem;
-            //  background-color: red;
         }
         .news_event_cards{
             width: 100%;
@@ -159,11 +151,6 @@
 }
 .visit_place_section{
     background-color: #F5F5F5;
-    padding: 8rem 0;
-    @media (max-width:500px) {
-        padding-bottom: 1.8rem;
-        padding-top: 4rem;
-    }
     .visit_place_container{   
        display: flex;
        flex-direction: column;
@@ -208,10 +195,6 @@
 }
 .location_contact_section{
     background-color: #ffffff;
-    padding: 8rem 0;
-    @media (max-width:500px) {
-        padding: 1.8rem 0;
-    }
     h2{
         font-family: "Raleway",sans-serif;
         letter-spacing: 0.2rem;
@@ -220,12 +203,16 @@
        display: flex;
        flex-direction: column;
        gap: 3.2rem;
-       @media (max-width:500px) {
-        gap: 1.5rem;
+       @media (width<768px) {
+        gap: 1.4rem;
      }
-       @media (max-width:1024px) {
-            width: 95%;
-            padding: 0 2rem;
-       }
     }
 }
+
+.book_form{
+  display: none;
+    @media (width < 800px) {
+         display: block;
+    }
+}
+

@@ -28,12 +28,12 @@ export const Header = ({ Color }) => {
     <header
       style={{
         background: changeHeaderStyle ? "white" : "",
-        position: changeHeaderStyle ? "fixed " : "",
+        position: changeHeaderStyle ? "fixed" : "",
         top: 0,
         color: changeHeaderStyle ? "black" : Color,
       }}
     >
-      <nav className="max-w-[1320px] m-auto">
+      <nav className="max-w-[1320px] m-auto  px-8 py-3">
         {!changeHeaderStyle && (
           <div className="upper_div md:flex justify-end gap-10 lg:visible hidden">
             <div className="flex items-center gap-3">
@@ -60,27 +60,25 @@ export const Header = ({ Color }) => {
           <ul>
             {Nav_Links.map((links, index) => {
               return (
-                <>
-                  <li
-                    key={index}
-                    className={`flex items-center ${links.class}`}
-                    onClick={() => {
-                      links.class && alert("Book Now");
+                <li
+                  key={index + links}
+                  className={`flex items-center ${links.class}`}
+                  onClick={() => {
+                    links.class && alert("Book Now");
+                  }}
+                >
+                  <NavLink
+                    to={links.src}
+                    style={({ isActive }) => {
+                      return {
+                        borderBottom: isActive ? "4px solid #DEB666" : "",
+                      };
                     }}
                   >
-                    <NavLink
-                      to={links.src}
-                      style={({ isActive }) => {
-                        return {
-                          borderBottom: isActive ? "4px solid #DEB666" : "",
-                        };
-                      }}
-                    >
-                      {links.linkName}
-                    </NavLink>
-                    {/* <IoIosArrowDown size={12} /> */}
-                  </li>
-                </>
+                    {links.linkName}
+                  </NavLink>
+                  {/* <IoIosArrowDown size={12} /> */}
+                </li>
               );
             })}
           </ul>

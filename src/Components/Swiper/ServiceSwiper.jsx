@@ -10,12 +10,12 @@ import serviceimg1 from "../../assets/serviceimg1.png";
 import serviceimg2 from "../../assets/serviceimg2.png";
 import serviceimg3 from "../../assets/serviceimg3.png";
 import serviceimg4 from "../../assets/serviceimg4.png";
-import { useServiceHook } from "../../Context/ServiceContextProvider";
+import { useService } from "../../Context/ServiceContextProvider";
 
 const serviceImages = [serviceimg1, serviceimg2, serviceimg4];
 
 export const ServiceSwiper = ({ i }) => {
-  const { setSlideIndexValue } = useServiceHook();
+  const { setSlideIndexValue } = useService();
   return (
     <div>
       <Swiper
@@ -32,8 +32,8 @@ export const ServiceSwiper = ({ i }) => {
           setSlideIndexValue(i.realIndex);
         }}
       >
-        {serviceImages.map((i) => (
-          <SwiperSlide>
+        {serviceImages.map((i, index) => (
+          <SwiperSlide key={index}>
             <img src={i} alt={i} />
           </SwiperSlide>
         ))}

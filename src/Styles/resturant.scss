@@ -23,23 +23,14 @@
             opacity: 0.6;
             z-index: -1;
         }
-        h2{
-            text-align: center;
-            font-size:  4rem;
-            letter-spacing: 0.1rem;
-            color: white;
-            text-transform: uppercase;
-            @media (max-width:768px) {
-                 font-size: 2.2rem;
-            }
+        h1{
+            letter-spacing: 0.2rem;
+            font-weight: 700;
+          
         }
     }
     .resturant_container{
         font-family: "";
-        @media (max-width:500px) {
-            width: 100%;
-            padding: 3rem 1.25rem;
-         }
         .our_resturant{
             font-family: "Lato";
             .right{

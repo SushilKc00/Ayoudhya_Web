@@ -12,6 +12,6 @@ const ServiceContextProvider = ({ children }) => {
 
 export default ServiceContextProvider;
 
-export const useServiceHook = () => {
+export const useService = () => {
   return useContext(ServiceProvider);
 };

@@ -10,10 +10,26 @@ import menuimg1 from "../../assets/menuimg1.webp";
 import menuimg2 from "../../assets/menuimg2.jpg";
 import menuimg3 from "../../assets/menuimg3.jpg";
 import restBackgroundImage from "../../assets/restback.jpg";
-
 import useScrollTop from "../../Components/useScrollTop";
 
-const restaurantImage = [resturant1, resturant2, resturant3, resturant4];
+const restaurantImage = [
+  {
+    title: "plate_veg",
+    img: resturant1,
+  },
+  {
+    title: "plate_simple",
+    img: resturant2,
+  },
+  {
+    title: "plate_salad",
+    img: resturant3,
+  },
+  {
+    title: "plate_rice",
+    img: resturant4,
+  },
+];
 
 const menuImage = [
   {
@@ -35,6 +51,7 @@ const menuImage = [
     desc: "Lorem ipsum dolor sit amet, elit, sed diam nonummy nibh euismod tincidunt ut laoreet...",
   },
 ];
+
 const allMenus = [
   {
     name: "Soft Drinks",
@@ -321,11 +338,13 @@ export const Resturant = () => {
         }}
       >
         <Header Color={"white"} />
-        <div className=" h-[35vh] flex items-center justify-center w-[100%]">
-          <h2>welcome to Hotel Awadh Vilas</h2>
+        <div className=" sm:h-[35vh] sm:mt-0 mt-16 flex items-center  justify-center w-[100%]">
+          <h1 className="md:text-6xl text-[1.7rem] text-center text-white uppercase">
+            welcome to Hotel Awadh Vilas
+          </h1>
         </div>
       </div>
-      <div className="resturant_container max-w-[1320px] m-auto py-[8rem] px-2">
+      <div className="resturant_container max-w-[1320px] m-auto px-8 md:py-[6rem] py-[2.5rem]">
         <div className="our_resturant flex lg:flex-row flex-col gap-10">
           <div className="left xl:w-[60%] lg:w-[50%]">
             <h2 className="sm:text-5xl text-[2rem] font-bold text-gray-600">
@@ -360,10 +379,10 @@ export const Resturant = () => {
             </p>
           </div>
           <div className="right xl:w-[40%] lg:w-[50%] grid grid-cols-2 gap-4 ">
-            {restaurantImage.map((i) => {
+            {restaurantImage.map((i, index) => {
               return (
-                <div>
-                  <img src={i} alt="" className="rounded-lg" />
+                <div key={index}>
+                  <img src={i.img} alt={i.title} className="rounded-lg" />
                 </div>
               );
             })}
@@ -376,8 +395,8 @@ export const Resturant = () => {
           </h2>
           <div className="flex lg:flex-row flex-col gap-7 mt-12">
             <div className="flex flex-col lg:w-[50%] gap-10">
-              {menuImage.map((d) => {
-                return <MenuCard menuDetails={d} />;
+              {menuImage.map((d, index) => {
+                return <MenuCard menuDetails={d} key={index} />;
               })}
             </div>
             <div className="lg:w-[50%] shadow-lg shadow-gray-500 px-3 py-12">
@@ -389,8 +408,8 @@ export const Resturant = () => {
                 Below
               </small>
               <div className="drop_down_menu">
-                {allMenus.map((m) => (
-                  <DropDown m={m} />
+                {allMenus.map((m, index) => (
+                  <DropDown m={m} key={index} />
                 ))}
               </div>
               <div className="form_container">
@@ -493,8 +512,8 @@ const DropDown = ({ m }) => {
           maxHeight: showContent ? "5555px" : "0",
         }}
       >
-        {m.subName.map((s) => (
-          <div className="menu_items flex justify-between">
+        {m.subName.map((s, index) => (
+          <div className="menu_items flex justify-between" key={index}>
             <div>
               <h5>{s.name}</h5>
               <span>₹ {s.price}</span>

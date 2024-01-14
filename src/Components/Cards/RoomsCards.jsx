@@ -8,7 +8,7 @@ export const RoomsCards = ({ roomDetails }) => {
         <img
           src={roomDetails.img}
           className="hover:scale-110 transition-all duration-500"
-          alt=""
+          alt={`${roomDetails.roomType}-img`}
         />
         <div className="absolute top-2 right-5 bg-[#D5B977] px-8  text-[1.3rem] py-2 rounded-lg text-white font-semibold">
           <h5 className="flex flex-col items-center">
