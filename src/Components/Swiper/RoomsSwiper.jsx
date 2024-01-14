@@ -47,6 +47,8 @@ export default function RoomsSwiper({ images }) {
             <img
               src={i}
               alt={i}
+              loading="lazy"
+              decoding="async"
               className="cursor-pointer"
               onClick={() => {
                 setPreviewImage(true);
@@ -77,14 +79,24 @@ export default function RoomsSwiper({ images }) {
       >
         {images?.map((i) => (
           <SwiperSlide>
-            <img src={i} className="cursor-pointer" />
+            <img
+              src={i}
+              loading="lazy"
+              decoding="async"
+              className="cursor-pointer"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
       {previewImage && (
         <div className="fixed top-0 left-0 w-[100%] h-[100vh] bg-[#000000c6] z-30 flex flex-col justify-center items-center">
           <div className="relative bg-green-500 w-[80%] m-auto">
-            <img src={images[imgIndex]} alt="" />
+            <img
+              src={images[imgIndex]}
+              loading="lazy"
+              decoding="async"
+              alt=""
+            />
             <p
               className="text-4xl text-white bg-slate-900 w-20 h-20 flex justify-center items-center rounded-full mb-4 cursor-pointer absolute top-[-13%] right-[-3%]"
               onClick={() => {

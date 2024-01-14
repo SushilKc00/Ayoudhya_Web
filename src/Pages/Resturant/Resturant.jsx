@@ -363,7 +363,13 @@ export const Resturant = () => {
             {restaurantImage.map((i) => {
               return (
                 <div>
-                  <img src={i} alt="" className="rounded-lg" />
+                  <img
+                    src={i}
+                    loading="lazy"
+                    decoding="async"
+                    alt=""
+                    className="rounded-lg"
+                  />
                 </div>
               );
             })}

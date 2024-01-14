@@ -41,15 +41,21 @@ header{
                 }
                 &:hover::after{
                   width: 100%;
-                  background-color: #DEB666;
+                  background-color: #deb666;
                   transition: all 0.5s;
                 }
             }
             .book_now_btn{
-              background-color: #DEB666;
+              background-color: #deb666;
               padding: 0.5rem 1.4rem 0.1rem 1.4rem;
               border-radius: 2px;
               letter-spacing: 0;
+              // &:hover{
+              //   background-color: #B69854;
+              // }
+              &:active{
+                transform: scale(.9);
+              }
             }
             @media screen and (max-width:1000px){
                 display: none;

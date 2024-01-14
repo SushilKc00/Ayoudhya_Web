@@ -4,7 +4,13 @@ export const MenuCard = ({ menuDetails }) => {
   return (
     <div className="menu_card flex md:flex-row flex-col gap-5">
       <div className="left md:w-[35%] w-[100%]">
-        <img src={menuDetails.image} alt="" className="h-full  w-full" />
+        <img
+          src={menuDetails.image}
+          loading="lazy"
+          decoding="async"
+          alt=""
+          className="h-full  w-full"
+        />
       </div>
       <div className="right md:w-[80%] w-[100%] px-4 py-2">
         <div className="flex justify-between">

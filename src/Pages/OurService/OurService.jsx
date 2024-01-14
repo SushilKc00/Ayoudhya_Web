@@ -36,7 +36,7 @@ export const OurService = () => {
           <Header Color={"white"} />
           <div className=" max-w-[1320px] m-auto flex flex-col items-center justify-center min-h-[40vh]">
             <div>
-              <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl md:text-6xl text-3xl capitalize text-slate-100">
+              <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl tracking-widest md:text-6xl text-3xl capitalize text-slate-100">
                 We are awesome
               </h1>
             </div>
@@ -70,7 +70,7 @@ export const OurService = () => {
           <div className="mt-3">
             <Link
               to={`mailto:${email}`}
-              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium btn_bg_color px-6 py-3 hover:bg-[#d5b872] active:scale-90 rounded-xl border-2"
+              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium px-6 py-3 bg-[#deb666] hover:bg-[#B69854] active:scale-95 rounded-xl border-[#deb666] border"
             >
               <AiOutlineMail />
               {email}
@@ -79,7 +79,7 @@ export const OurService = () => {
           <div className="mt-3">
             <Link
               to={`tel:${email}`}
-              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium btn_bg_color px-6 py-3 hover:bg-[#d5b872] active:scale-90 rounded-xl border-2 "
+              className="text-white flex items-center justify-center gap-2 lg:text-3xl md:text-2xl text-xl font-medium px-6 py-3 bg-[#deb666] hover:bg-[#B69854] active:scale-95 rounded-xl border-[#deb666] border "
             >
               <AiOutlinePhone />
               {number}

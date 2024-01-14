@@ -54,35 +54,37 @@ export const Header = ({ Color }) => {
             <img
               src={headerLogo}
               alt="header_logo"
+              loading="lazy"
+              decoding="async"
+              width={112}
+              height={112}
               style={{ width: "7rem", height: "7rem" }}
             />
           </div>
           <ul>
-            {Nav_Links.map((links, index) => {
-              return (
-                <>
-                  <li
-                    key={index}
-                    className={`flex items-center ${links.class}`}
-                    onClick={() => {
-                      links.class && alert("Book Now");
+            {Nav_Links.map((link, index) => (
+              <>
+                <li
+                  key={index}
+                  className={`flex items-center ${link.class}`}
+                  onClick={() => {
+                    link.class && alert("Book Now");
+                  }}
+                >
+                  <NavLink
+                    to={link.src}
+                    style={({ isActive }) => {
+                      return {
+                        borderBottom: isActive ? "4px solid #DEB666" : "",
+                      };
                     }}
                   >
-                    <NavLink
-                      to={links.src}
-                      style={({ isActive }) => {
-                        return {
-                          borderBottom: isActive ? "4px solid #DEB666" : "",
-                        };
-                      }}
-                    >
-                      {links.linkName}
-                    </NavLink>
-                    {/* <IoIosArrowDown size={12} /> */}
-                  </li>
-                </>
-              );
-            })}
+                    {link.linkName}
+                  </NavLink>
+                  {/* <IoIosArrowDown size={12} /> */}
+                </li>
+              </>
+            ))}
           </ul>
           <div
             className="ham_burger_menu"

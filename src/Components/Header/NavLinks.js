@@ -25,7 +25,7 @@ const Nav_Links = [
   },
   {
     linkName: "Book Now",
-    class: "book_now_btn",
+    class: "book_now_btn active:scale-95",
     src: "",
   },
 ];

@@ -34,7 +34,7 @@ export const ServiceSwiper = ({ i }) => {
       >
         {serviceImages.map((i) => (
           <SwiperSlide>
-            <img src={i} alt={i} />
+            <img src={i} loading="lazy" decoding="async" alt={i} />
           </SwiperSlide>
         ))}
       </Swiper>

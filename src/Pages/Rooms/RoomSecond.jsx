@@ -95,6 +95,8 @@ export const RoomSecond = () => {
                 <div>
                   <img
                     src={i.img}
+                    loading="lazy"
+              decoding="async"
                     alt=""
                     style={{
                       height: "80px",

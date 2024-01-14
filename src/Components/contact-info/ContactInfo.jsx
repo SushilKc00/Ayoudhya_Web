@@ -55,8 +55,9 @@ const ContactInfo = ({ title, description, icon }) => {
   return (
     <div className="flex flex-col pt-2 pb-2 gap-3 items-start self-stretch lg:mt-5 md:mt-4 sm:mt-2">
       <div className="flex gap-3 items-center justify-start py-3 ps-0 pe-3">
-        <div className="flex items-start  px-2 py-2 rounded-full btn_bg_color hover:bg-yellow-500  border-2 border-yellow-500 text-white">
+        <div className="flex items-start  px-2 py-2 rounded-full bg-[#deb666] hover:bg-[#B69854]  border border-[#deb666] text-white">
           {" "}
+          <span className="sr-only">{iconTitle}</span>
           <span className="text-4xl">{icon}</span>
         </div>
         <div>

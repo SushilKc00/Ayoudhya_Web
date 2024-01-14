@@ -177,10 +177,8 @@ export const Home = () => {
             })}
           </div>
           <div className="flex justify-center">
-            <Link>
-              <button className="bg-[#d5b977] text-white text-2xl px-5 py-2">
-                View Room List
-              </button>
+            <Link className="bg-[#deb666] hover:bg-[#B69854] active:scale-95 text-white text-2xl px-5 py-2">
+              View Room List
             </Link>
           </div>
         </div>
@@ -335,7 +333,7 @@ export const Home = () => {
               return (
                 <div className="temple_cards">
                   <div className="w-full h-[230px]">
-                    <img src={i.img} alt="" />
+                    <img src={i.img} loading="lazy" decoding="async" alt="" />
                     <div className="shree_ram text-5xl">
                       !! 🚩जय श्री राम🚩 !!
                     </div>
@@ -365,7 +363,7 @@ export const Home = () => {
           <div className="flex gap-8 lg:flex-row flex-col">
             <div className="left xl:w-[50%] w-[100%]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448196.52632082853!2d76.76357549901144!3d28.643684629087268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1704876004704!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d455835.34705558006!2d82.21026!3d26.801325!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a0733f0f70f8b%3A0xcaec4df444ccc7f2!2sHotel%20Awadh%20Vilas!5e0!3m2!1sen!2sus!4v1705145338516!5m2!1sen!2sus"
                 height="370"
                 style={{ border: 0, width: "100%" }}
                 allowfullscreen=""
@@ -376,27 +374,27 @@ export const Home = () => {
             <div className="right xl:w-[50%] w-[100%] flex flex-col gap-10">
               <form action="" className="flex flex-col gap-5">
                 <div className="flex sm:flex-row flex-col gap-2">
-                  <a
-                    href=""
-                    className="flex items-center  gap-2 text-xl text-white w-full bg-[#debb6c] px-4 py-2"
+                  <Link
+                    to=""
+                    className="flex items-center  gap-2 text-xl hover:bg-[#B69854] text-white w-full bg-[#debb6c] px-4 py-2"
                   >
                     <CiLocationOn size={18} />
                     Ayodhya
-                  </a>
-                  <a
-                    href=""
-                    className="flex items-center gap-2 text-xl text-white w-full bg-[#debb6c] px-4 py-2"
+                  </Link>
+                  <Link
+                    to=""
+                    className="flex items-center gap-2 text-xl hover:bg-[#B69854] text-white w-full bg-[#debb6c] px-4 py-2"
                   >
                     <GiRotaryPhone size={18} />
                     +7894561230
-                  </a>{" "}
-                  <a
-                    href=""
-                    className="flex text-xl gap-2 text-white w-full bg-[#debb6c] px-4 py-2"
+                  </Link>{" "}
+                  <Link
+                    to=""
+                    className="flex text-xl gap-2 text-white hover:bg-[#B69854] w-full bg-[#debb6c] px-4 py-2"
                   >
                     <AiOutlineMail size={18} />
                     contact@hotelawadhvilasayodhya.com
-                  </a>
+                  </Link>
                 </div>
                 <div className="w-full">
                   <input
@@ -426,7 +424,7 @@ export const Home = () => {
                     className="w-full outline-none px-4 py-5 text-2xl border-2 border-gray-300"
                   />
                 </div>
-                <button className="w-full bg-[#debb6c] text-white text-3xl py-6">
+                <button className="w-full bg-[#debb6c] hover:bg-[#B69854] active:scale-95 text-white text-3xl py-6">
                   Send Message
                 </button>
               </form>

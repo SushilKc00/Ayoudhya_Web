@@ -104,7 +104,9 @@ export const BookForm = () => {
           />
         </div>
         <div className="flex justify-center">
-          <button className="bg-[#B69854] text-white text-3xl w-[90%] py-4 hover:bg-[#d5b872] transition-all">
+          <button
+          onClick={(e)=> e.preventDefault()}
+           className="bg-[#deb666] border border-[#deb666] active:scale-95 text-white text-3xl w-[90%] py-4 hover:bg-[#B69854] transition-all">
             Book A Room Now
           </button>
         </div>
