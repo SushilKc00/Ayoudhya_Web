@@ -1,6 +1,6 @@
 import React from "react";
 import { Header } from "../../Components/Header/Header";
-import aboutimg1 from "../../assets/aboutimg1.png";
+// import aboutimg1 from "../../assets/aboutimg1.png";
 import useScrollTop from "../../Components/useScrollTop";
 import aboutBackgroundImage from "../../assets/aboutback.jpg";
 import Number from "../../Components/Number";
@@ -15,7 +15,7 @@ export const About = () => {
     <div className="about_section">
       <div
         className="paralax_container"
-        style={{
+        style={{ 
           backgroundImage: `url(${aboutBackgroundImage})`,
         }}
       >
@@ -62,7 +62,7 @@ export const About = () => {
           </div>
           <div className="lg:w-[50%]">
             <video
-              src={awadhvilasvideo}
+               src={awadhvilasvideo}
                autoPlay
                controls
               className="w-full"
@@ -100,7 +100,7 @@ export const About = () => {
         <FacilitiesCardComponent />
       </div>
       <div>
-        <ChooseUs />
+        {/* <ChooseUs Temple1={img}/> */}
       </div>
     </div>
   );

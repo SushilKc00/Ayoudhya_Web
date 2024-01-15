@@ -7,6 +7,8 @@ import FacilitiesCardComponent from "../../Components/Common-components/Faciliti
 import ChooseUs from "../../Components/Common-components/ChooseUs";
 import useScrollTop from "../../Components/useScrollTop";
 import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
+import Temple1 from "../../assets/temple1.png";
+
 
 export const OurService = () => {
   useScrollTop();
@@ -52,7 +54,7 @@ export const OurService = () => {
       <FacilitiesCardComponent />
       {/* --------------------------card section----------------------- */}
       {/* --------------------------choose-us section----------------------- */}
-      <ChooseUs />
+      <ChooseUs Temple1={Temple1}/>
       {/* --------------------------choose-us section----------------------- */}
       {/* --------------------------Hotel Reservation section----------------------- */}
       <section className="lg:py-14 md:py-9 py-4 bg-white ">
@@ -88,6 +90,7 @@ export const OurService = () => {
         </div>
       </section>
       {/* --------------------------Hotel Reservation section----------------------- */}
+      
     </div>
   );
 };

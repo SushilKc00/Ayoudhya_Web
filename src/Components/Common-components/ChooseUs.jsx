@@ -1,9 +1,8 @@
 import React from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import BgImg2 from "../../assets/bg-img/rama.webp";
-import Temple1 from "../../assets/temple1.png";
 
-function ChooseUs() {
+function ChooseUs({Temple1}) {
   const destination = [
     {
       destinationName: "Saryu Nadi",
@@ -56,6 +55,7 @@ function ChooseUs() {
       icon: <AiOutlineCheck />,
     },
   ];
+
   return (
     <section className="w-[100%] h-[100%] ">
       <div

@@ -135,14 +135,14 @@ export const Rooms = () => {
               <img
                 src={item.url}
                 alt={item.title}
-                className="hover:scale-110 duration-1000 h-[230px] w-[400px]"
+                className="hover:scale-110 duration-1000 lg:h-[230px] lg:w-[450px] md:h-[450px] md:w-[100%]"
               />
               {/* <div className="over-layer-icon absolute w-[100%] h-[100%] top-0 left-0 bg-[hsla(178, 100%, 50%, 0.5)] hover:block duration-1000">
                 <GrLink className="absolute top-[50%] left-[50%] transform:translate-[-50%,-50%]"/>
                 </div> */}
             </picture>
             <div className="lg:flex md:flex xl:h[47vh]">
-              <div className="flex flex-col items-start bg-[#F5F5F5] lg:justify-between h-[100%] lg:w-[75%] md:w-[75%] gap-3 px-2 lg:py-4 md:py-2 py-2">
+              <div className="flex flex-col items-start bg-[#F5F5F5] lg:justify-between h-[100%] lg:w-[75%] md:w-[75%] gap-3 px-2 lg:py-4 md:py-3 py-2">
                 <div className="">
                   <h2 className="lg:text-6xl  lg:text-left md:text-center text-center md:text-5xl text-[2rem] text-[#606060] font-normal mb-3">
                     {item.title}
@@ -160,10 +160,7 @@ export const Rooms = () => {
                       <span className="sr-only">{item.iconTitle}</span>
                      
                       <span >{item.icon}</span>
-                      {/* <div className="absolute top-0 left-0 z-[1060] p-[1px] font-normal max-w-[276px] hidden group-hover:block opacity-0 hover:opacity-100 text-[#8a959e]">
-                        <h3>{item.iconTitle}</h3>
-                        <div>{item.iconTitle}</div>
-                      </div> */}
+                     
                     </div>
                   ))}
                 </div>
