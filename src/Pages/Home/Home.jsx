@@ -115,7 +115,7 @@ export const Home = () => {
 
   const { slideIndexValue } = useService();
 
-  useScrollTop();
+  // useScrollTop();
   return (
     <div>
       {/* WELCOME SECTION....... */}
@@ -205,7 +205,11 @@ export const Home = () => {
             volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
             ullamcorper suscipit. Restaurant
           </p>
-          <div className="flex items-center gap-8 md:flex-row flex-col">
+
+          <div className="service_swiper_wrapper">
+            <ServiceSwiper />
+          </div>
+          {/* <div className="flex items-center gap-8 md:flex-row flex-col">
             <div className="left lg:w-[60%] md:w-[50%] w-[100%]">
               <ServiceSwiper />
             </div>
@@ -229,44 +233,8 @@ export const Home = () => {
                   </div>
                 </div>
               ))}
-              {/* <div className="flex items-center gap-10 bg-white px-5 py-3">
-                <AiOutlineLineChart size={30} />
-                <div className="">
-                  <h4 className="lg:text-3xl text-2xl text-gray-700">
-                    Resturant
-                  </h4>
-                  <p className="lg:text-[1.3rem] text-[1rem] leading-[2.2rem] text-gray-600 mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quibusdam, ab architecto temporibus quia eos molestias
-                  </p>
-                </div>
-              </div>{" "}
-              <div className="flex items-center gap-10 bg-white px-5 py-3">
-                <AiOutlineLineChart size={30} />
-                <div className="">
-                  <h4 className="lg:text-3xl text-2xl text-gray-700">
-                    Resturant
-                  </h4>
-                  <p className="lg:text-[1.3rem] text-[1rem] leading-[2.2rem] text-gray-600 mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quibusdam, ab architecto temporibus quia eos molestias
-                  </p>
-                </div>
-              </div>{" "}
-              <div className="flex items-center gap-10 bg-white px-5 py-3">
-                <AiOutlineLineChart size={30} />
-                <div className="">
-                  <h4 className="lg:text-3xl text-2xl text-gray-700">
-                    Resturant
-                  </h4>
-                  <p className="lg:text-[1.3rem] text-[1rem] leading-[2.2rem] text-gray-600 mt-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quibusdam, ab architecto temporibus quia eos molestias
-                  </p>
-                </div>
-              </div> */}
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
