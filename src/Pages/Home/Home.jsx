@@ -13,7 +13,10 @@ import temple1 from "../../assets/temple1.png";
 import temple2 from "../../assets/temple2.png";
 import temple3 from "../../assets/temple3.png";
 import temple4 from "../../assets/temple4.png";
-import roomimg1 from "../../assets/roomimg1.png";
+import ClassicRoom from "../../assets/asset-5.jpeg";
+import DeluxeRoom from "../../assets/asset-6.jpeg";
+import BedRoom3 from "../../assets/asset-14.jpeg";
+import SuiteRoom from "../../assets/asset-8.jpeg" ;
 import newsimg1 from "../../assets/newsimg1.png";
 import { ServiceSwiper } from "../../Components/Swiper/ServiceSwiper";
 import useScrollTop from "../../Components/useScrollTop";
@@ -42,16 +45,20 @@ const templeImages = [
 
 const roomImages = [
   {
-    img: roomimg1,
-    roomType: "Single Room",
+    img: ClassicRoom,
+    roomType: "Classic Room",
   },
   {
-    img: roomimg1,
-    roomType: "Double Room",
+    img: DeluxeRoom,
+    roomType: "Deluxe Room",
   },
   {
-    img: roomimg1,
-    roomType: "Single Room",
+    img: BedRoom3,
+    roomType: "3 Bed Room",
+  },
+  {
+    img: SuiteRoom,
+    roomType: "Suite Room",
   },
 ];
 

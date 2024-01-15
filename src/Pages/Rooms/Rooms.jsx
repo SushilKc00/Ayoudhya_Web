@@ -2,9 +2,10 @@ import React from "react";
 import { Header } from "../../Components/Header/Header";
 import { Link } from "react-router-dom";
 import BannerImg from "../../assets/bas-van.jpg";
-import Room1 from "../../assets/singleroom1.png";
-import Room2 from "../../assets/singleroom2.jpg";
-import Room3 from "../../assets/singleroom3.jpg";
+import ClassicRoom from "../../assets/asset-5.jpeg";
+import DeluxeRoom from "../../assets/asset-6.jpeg";
+import BedRoom3 from "../../assets/asset-14.jpeg";
+import SuiteRoom from "../../assets/asset-8.jpeg" ;
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import BgImg from "../../assets/bg-img/Home-About-BG-Jim-Fahad-Digital.jpg";
 import { GrLink } from "react-icons/gr";
@@ -27,8 +28,8 @@ export const Rooms = () => {
 
   const roomCardData = [
     {
-      url: Room1,
-      title: "Room",
+      url: ClassicRoom,
+      title: "Classic Room",
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
       icons: [
@@ -41,8 +42,8 @@ export const Rooms = () => {
       time: "per night",
     },
     {
-      url: Room2,
-      title: "Room",
+      url: DeluxeRoom,
+      title: "Deluxe Room",
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
       icons: [
@@ -55,8 +56,22 @@ export const Rooms = () => {
       time: "per night",
     },
     {
-      url: Room3,
-      title: "Room",
+      url: BedRoom3,
+      title: "3 Bed Room",
+      description:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
+      icons: [
+        { icon: <GiCoffeeCup />, iconTitle: "breakfast" },
+        { icon: <GiForkKnifeSpoon />, iconTitle: "restaurant" },
+        { icon: <FaWifi />, iconTitle: "free wifi" },
+        { icon: <FaDesktop />, iconTitle: "plasma tv with cable channel" },
+      ],
+      price: "219,00",
+      time: "per night",
+    },
+    {
+      url: SuiteRoom,
+      title: "Suite Room",
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
       icons: [
@@ -120,7 +135,7 @@ export const Rooms = () => {
               <img
                 src={item.url}
                 alt={item.title}
-                className="hover:scale-110 duration-1000"
+                className="hover:scale-110 duration-1000 h-[230px] w-[400px]"
               />
               {/* <div className="over-layer-icon absolute w-[100%] h-[100%] top-0 left-0 bg-[hsla(178, 100%, 50%, 0.5)] hover:block duration-1000">
                 <GrLink className="absolute top-[50%] left-[50%] transform:translate-[-50%,-50%]"/>
@@ -143,11 +158,12 @@ export const Rooms = () => {
                       key={i}
                     >
                       <span className="sr-only">{item.iconTitle}</span>
-                      <span>{item.icon}</span>
-                      <div className="absolute top-0 left-0 z-[1060] p-[1px] font-normal max-w-[276px] hidden group-hover:block opacity-0 hover:opacity-100 text-[#8a959e]">
+                     
+                      <span >{item.icon}</span>
+                      {/* <div className="absolute top-0 left-0 z-[1060] p-[1px] font-normal max-w-[276px] hidden group-hover:block opacity-0 hover:opacity-100 text-[#8a959e]">
                         <h3>{item.iconTitle}</h3>
                         <div>{item.iconTitle}</div>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>

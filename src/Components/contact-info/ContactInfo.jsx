@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ContactInfo = ({ title, description, icon }) => {
+const ContactInfo = ({ title, description, icon,iconTitle }) => {
   let element;
 
   switch (title) {
