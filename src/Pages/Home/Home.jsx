@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../../Components/Header/Header";
 import { CiStar } from "react-icons/ci";
 import { BsCheck2Square } from "react-icons/bs";
-import { AiOutlineLineChart, AiOutlineMail } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { GiRotaryPhone } from "react-icons/gi";
 import { FaRegCirclePlay } from "react-icons/fa6";
@@ -16,7 +15,6 @@ import temple4 from "../../assets/temple4.png";
 import roomimg1 from "../../assets/roomimg1.png";
 import newsimg1 from "../../assets/newsimg1.png";
 import { ServiceSwiper } from "../../Components/Swiper/ServiceSwiper";
-import { useService } from "../../Context/ServiceContextProvider";
 import useScrollTop from "../../Components/useScrollTop";
 import ayodhyaBackgrounImg from "../../assets/ayodhya.png";
 import videoImg from "../../assets/videoimg.jpg";
@@ -79,33 +77,6 @@ const newsImgages = [
   },
 ];
 
-const serviceArr = [
-  {
-    name: "Restaurant",
-    detail:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.",
-    icon: "icons",
-  },
-  {
-    name: "Spa - Beauty & Health",
-    detail:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.",
-    icon: "icons",
-  },
-  {
-    name: "Conference Room",
-    detail:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.",
-    icon: "icons",
-  },
-  {
-    name: "Swimming Pool",
-    detail:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.",
-    icon: "icons",
-  },
-];
-
 export const Home = () => {
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
@@ -113,9 +84,7 @@ export const Home = () => {
 
   const [playVideo, SetPlayVideo] = useState(false);
 
-  const { slideIndexValue } = useService();
-
-  // useScrollTop();
+  useScrollTop();
   return (
     <div>
       {/* WELCOME SECTION....... */}
