@@ -53,6 +53,10 @@ const roomImages = [
     img: roomimg1,
     roomType: "Single Room",
   },
+  {
+    img: roomimg1,
+    roomType: "Single Room",
+  },
 ];
 
 const newsImgages = [
