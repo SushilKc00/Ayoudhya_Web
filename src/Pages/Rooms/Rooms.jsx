@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../../Components/Header/Header";
 import { Link } from "react-router-dom";
-import BannerImg from "../../assets/bas-van.jpg";
+import BannerImg from "../../assets/asset-8.jpeg";
 import ClassicRoom from "../../assets/asset-5.jpeg";
 import DeluxeRoom from "../../assets/asset-6.jpeg";
 import BedRoom3 from "../../assets/asset-14.jpeg";
@@ -15,6 +15,8 @@ import { FaWifi } from "react-icons/fa";
 import { FaDesktop } from "react-icons/fa";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
+import img from "../../assets/asset-8.jpeg"
+
 import useScrollTop from "../../Components/useScrollTop";
 
 export const Rooms = () => {
@@ -99,7 +101,7 @@ export const Rooms = () => {
             <Header Color={"white"} />
             <div className="max-w-[1320px] m-auto flex flex-col justify-center items-center px-4 min-h-[40vh]">
               <div className="py-5">
-                <h1 className="capitalize text-slate-50 font-normal lg:text-6xl md:text-5xl text-3xl">
+                <h1 className="capitalize text-slate-50  lg:text-6xl md:text-5xl text-3xl font-fl-BSC tracking-wider font-extrabold">
                   Rooms view
                 </h1>
               </div>
@@ -125,6 +127,7 @@ export const Rooms = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
+        <h2 className="sm:text-7xl text-4xl text-center sm:my-12 my-4 text-[#606060]">Rooms</h2>
         {roomCardData.map((item, i) => (
           <Link
             to="#"
@@ -196,7 +199,7 @@ export const Rooms = () => {
       {/* ---------------------------------------------Facilities--------------------------------------------------- */}
       {/* ---------------------------------------------ChooseUs--------------------------------------------------- */}
       <section>
-        <ChooseUs />
+        <ChooseUs Temple1={img}/>
       </section>
       {/* ---------------------------------------------ChooseUs--------------------------------------------------- */}
     </div>

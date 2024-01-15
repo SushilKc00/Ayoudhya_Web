@@ -7,6 +7,7 @@ import Number from "../../Components/Number";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
 import awadhvilasvideo from "../../assets/hotelawadhvilasayodhya.mp4"
+import img from "../../assets/asset-9.jpeg"
 
 
 export const About = () => {
@@ -100,7 +101,7 @@ export const About = () => {
         <FacilitiesCardComponent />
       </div>
       <div>
-        {/* <ChooseUs Temple1={img}/> */}
+        <ChooseUs Temple1={img}/>
       </div>
     </div>
   );
