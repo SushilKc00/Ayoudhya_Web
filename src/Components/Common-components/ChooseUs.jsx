@@ -76,7 +76,7 @@ function ChooseUs({Temple1}) {
                 </h2>
               </div>
               <div className="max-w-[60%]">
-                <p className="text-center lg:text-8xl md:text-6xl text-3xl font-semibold capitalize font-fl-lex text-slate-200">
+                <p className="text-center lg:text-8xl md:text-6xl text-3xl font-semibold capitalize font-fl-lex text-slate-200 mt-4">
                   closest from Famous Places In Ayodha ji
                 </p>
               </div>

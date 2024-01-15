@@ -22,10 +22,18 @@ export const MobileNav = ({ show, setHamMenu }) => {
       <p className="text-center text-4xl text-gray-500">Menu</p>
       {Nav_Links.map((links, index) => {
         return (
-          <li className="flex items-center gap-3" key={index + links}>
-            <NavLink to={links.src} key={index}>
-              {links.linkName}
-            </NavLink>
+          <li  className={`flex items-center ${links.class}`}
+           key={index + links}>
+            <NavLink
+                    to={links.src === "/book now" ? "/contact_us" : links.src}
+                    style={({ isActive }) => {
+                      return {
+                        borderBottom: isActive  ? "4px solid #DEB666" : "",
+                      };
+                    }}
+                  >
+                    {links.linkName}
+                  </NavLink>
             {/* <IoIosArrowDown size={12} /> */}
           </li>
         );

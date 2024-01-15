@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import headerLogo from "../../assets/HeaderLogo.png";
 import Nav_Links from "./NavLinks";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link} from "react-router-dom";
 import { BiUpArrow } from "react-icons/bi";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { MdMenu } from "react-icons/md";
@@ -50,7 +50,7 @@ export const Header = ({ Color }) => {
         )}
 
         <div className="lower_div">
-          <div className="logo">
+          <Link to= "/" className="logo">
             <img
               src={headerLogo}
               alt="header_logo"
@@ -60,19 +60,17 @@ export const Header = ({ Color }) => {
               height={112}
               style={{ width: "7rem", height: "7rem" }}
             />
-          </div>
+          </Link>
           <ul>
             {Nav_Links.map((links, index) => {
               return (
                 <li
                   key={index + links}
                   className={`flex items-center ${links.class}`}
-                  onClick={() => {
-                    links.class && alert("Book Now");
-                  }}
+               
                 >
                   <NavLink
-                    to={links.src === "/bool now" ? "#" : links.src}
+                    to={links.src === "/book now" ? "/contact_us" : links.src}
                     style={({ isActive }) => {
                       return {
                         borderBottom: isActive  ? "4px solid #DEB666" : "",

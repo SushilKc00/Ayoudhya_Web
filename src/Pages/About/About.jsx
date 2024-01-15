@@ -7,7 +7,7 @@ import Number from "../../Components/Number";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
 import awadhvilasvideo from "../../assets/hotelawadhvilasayodhya.mp4"
-import img from "../../assets/asset-9.jpeg"
+import img from "../../assets/asset-8.jpeg"
 
 
 export const About = () => {

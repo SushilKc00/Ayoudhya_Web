@@ -92,6 +92,20 @@ header{
         font-weight: 900;
         color: rgb(101, 101, 101);
       }
+      .book_now_btn{
+        background-color: #deb666;
+        padding: 0.1rem 1.4rem;
+        border-radius: 2px;
+        letter-spacing: 0;
+        width: 40%;
+        &:hover{
+          background-color: #B69854;
+        }
+        &:active{
+          transform: scale(.9);
+        }
+      
+      }
     }
    
 }
