@@ -6,6 +6,7 @@ import aboutBackgroundImage from "../../assets/aboutback.jpg";
 import Number from "../../Components/Number";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
+import img from '../../assets/asset-9.jpeg'
 
 export const About = () => {
   useScrollTop();
@@ -99,7 +100,7 @@ export const About = () => {
         <FacilitiesCardComponent />
       </div>
       <div>
-        <ChooseUs />
+        <ChooseUs Temple1={img}/>
       </div>
     </div>
   );
