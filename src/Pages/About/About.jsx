@@ -8,7 +8,7 @@ import FacilitiesCardComponent from "../../Components/Common-components/Faciliti
 import ChooseUs from "../../Components/Common-components/ChooseUs";
 
 export const About = () => {
-  useScrollTop();
+  // useScrollTop();
   return (
     <div className="about_section">
       <div
