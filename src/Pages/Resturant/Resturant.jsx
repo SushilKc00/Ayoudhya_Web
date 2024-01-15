@@ -381,7 +381,7 @@ export const Resturant = () => {
           <div className="right xl:w-[40%] lg:w-[50%] grid grid-cols-2 gap-4 ">
             {restaurantImage.map((i, index) => {
               return (
-                <div>
+                <div key={index}>
                   <img
                     src={i.img}
                     loading="lazy"
