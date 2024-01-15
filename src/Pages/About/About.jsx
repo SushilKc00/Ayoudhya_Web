@@ -19,16 +19,16 @@ export const About = () => {
       >
         <Header Color={"white"} />
         <div className="w-full flex flex-col items-center justify-center h-[35vh] max-w-[1320px] m-auto py-4 px-2">
-          <h2 className="text-white sm:text-7xl text-5xl">About Awadh Vilas</h2>
+          <h1 className="text-white lg:text-7xl md:text-6xl text-3xl font-extrabold tracking-widest font-fl-BSC ">About Awadh Vilas</h1>
           <p className="mt-8 text-2xl text-white">
             Home / <span className="text-[#D6B519]">About Awadh Vilas</span>
           </p>
         </div>
       </div>
       <div className="about_content">
-        <div className="max-w-[1320px] flex lg:flex-row flex-col gap-10 m-auto px-8 py-3">
+        <div className="max-w-[1320px] flex lg:flex-row flex-col gap-10 m-auto px-8 md:py-[6rem] py-[2.5rem]">
           <div className="lg:w-[50%] w-[100%]">
-            <h2 className="text-gray-900 sm:text-6xl text-[2.2rem] font-semibold mb-6 sm:text-start text-center">
+            <h2 className="text-gray-900 sm:text-6xl text-[2.2rem] font-semibold mb-6 sm:text-start text-center ">
               Hotel Awadh Vilas - Since 1989
             </h2>
             <p className="text-gray-600 md:text-[1.5rem] text-[1.2rem] mt-8 text-justify">

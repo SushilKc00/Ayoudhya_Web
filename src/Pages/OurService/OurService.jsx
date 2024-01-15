@@ -36,7 +36,7 @@ export const OurService = () => {
           <Header Color={"white"} />
           <div className=" max-w-[1320px] m-auto flex flex-col items-center justify-center min-h-[40vh]">
             <div>
-              <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl tracking-widest md:text-6xl text-3xl capitalize text-slate-100">
+              <h1 className="text-center font-fl-BSC font-extrabold lg:text-7xl tracking-widest md:text-6xl text-3xl font-fl-BSC capitalize text-slate-100">
                 We are awesome
               </h1>
             </div>

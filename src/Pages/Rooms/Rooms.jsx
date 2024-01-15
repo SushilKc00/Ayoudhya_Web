@@ -102,7 +102,7 @@ export const Rooms = () => {
       </section>
       {/* ------room card------ */}
       <section
-        className="w-[100%] lg:py-12 md:py-8 py-0"
+        className="w-[100%] px-8 py-3"
         style={{
           backgroundImage: `url(${BgImg})`,
           backgroundPosition: "center",
@@ -129,10 +129,10 @@ export const Rooms = () => {
             <div className="lg:flex md:flex xl:h[47vh]">
               <div className="flex flex-col items-start bg-[#F5F5F5] lg:justify-between h-[100%] lg:w-[75%] md:w-[75%] gap-3 px-2 lg:py-4 md:py-2 py-2">
                 <div className="">
-                  <h2 className="lg:text-6xl lg:text-left md:text-center text-center md:text-5xl text-3xl text-[#606060] font-normal mb-3">
+                  <h2 className="lg:text-6xl  lg:text-left md:text-center text-center md:text-5xl text-[2rem] text-[#606060] font-normal mb-3">
                     {item.title}
                   </h2>
-                  <p className="text-2xl text-justify  text-[#858a99] font-normal">
+                  <p className="sm:text-2xl text-[1.2rem] text-justify  text-[#858a99] font-normal">
                     {item.description}
                   </p>
                 </div>
@@ -154,12 +154,12 @@ export const Rooms = () => {
               </div>
               <div className="flex flex-col items-center justify-between bg-[#EEEEEE] lg:w-[25%] md:w-[25%] px-2 lg:py-5 md:py-2 py-2 ">
                 <div>
-                  <p className="room-price text-5xl text-[#606060] lg:mb-8 md:mb-8 mb-4 flex items-center gap-1 p-2">
+                  <p className="room-price sm:text-5xl text-[2rem] text-[#606060] lg:mb-8 md:mb-8 mb-4 flex items-center gap-1 p-2">
                     <span className="sr-only">room price</span>
-                    <MdOutlineCurrencyRupee className="text-4xl" />
+                    <MdOutlineCurrencyRupee className="sm:text-4xl text-[1.6rem]" />
                     {item.price}
                   </p>
-                  <p className="uppercase text-center text-3xl text-[#858a99] p-3  ">
+                  <p className="uppercase text-center sm:text-3xl text-[1.2rem] text-[#858a99] p-3  ">
                     {item.time}
                   </p>
                 </div>

@@ -339,7 +339,7 @@ export const Resturant = () => {
       >
         <Header Color={"white"} />
         <div className=" sm:h-[35vh] sm:mt-0 mt-16 flex items-center  justify-center w-[100%]">
-          <h1 className="md:text-6xl text-[1.7rem] text-center text-white uppercase">
+          <h1 className="lg:text-7xl md:text-6xl text-3xl font-extrabold tracking-widest text-center font-fl-BSC text-white capitalize">
             welcome to Hotel Awadh Vilas
           </h1>
         </div>

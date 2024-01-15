@@ -25,8 +25,8 @@ const Nav_Links = [
   },
   {
     linkName: "Book Now",
-    class: "book_now_btn active:scale-95",
-    src: "",
+    class: "book_now_btn active:scale-95 hover:bg-[#B69854]",
+    src: "/book now",
   },
 ];
 

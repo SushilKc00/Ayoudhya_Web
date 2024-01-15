@@ -316,6 +316,7 @@ export const Home = () => {
           <div className="flex gap-8 lg:flex-row flex-col">
             <div className="left xl:w-[50%] w-[100%]">
               <iframe
+              title="Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d455835.34705558006!2d82.21026!3d26.801325!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a0733f0f70f8b%3A0xcaec4df444ccc7f2!2sHotel%20Awadh%20Vilas!5e0!3m2!1sen!2sus!4v1705145338516!5m2!1sen!2sus"
                 height="370"
                 style={{ border: 0, width: "100%" }}

@@ -12,7 +12,7 @@ export const Header = ({ Color }) => {
   const [hamMenu, setHamMenu] = useState(false);
 
   const scrollHeaderStyling = () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 50) {
       setChagneHeaderStyle(true);
     } else {
       setChagneHeaderStyle(false);
@@ -72,10 +72,10 @@ export const Header = ({ Color }) => {
                   }}
                 >
                   <NavLink
-                    to={links.src}
+                    to={links.src === "/bool now" ? "#" : links.src}
                     style={({ isActive }) => {
                       return {
-                        borderBottom: isActive ? "4px solid #DEB666" : "",
+                        borderBottom: isActive  ? "4px solid #DEB666" : "",
                       };
                     }}
                   >
