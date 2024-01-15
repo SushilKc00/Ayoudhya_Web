@@ -8,7 +8,7 @@ import FacilitiesCardComponent from "../../Components/Common-components/Faciliti
 import ChooseUs from "../../Components/Common-components/ChooseUs";
 
 export const About = () => {
-  // useScrollTop();
+  useScrollTop();
   return (
     <div className="about_section">
       <div
@@ -18,8 +18,8 @@ export const About = () => {
         }}
       >
         <Header Color={"white"} />
-        <div className="w-full flex flex-col items-center justify-center h-[35vh] max-w-[1320px] m-auto ">
-          <h1 className="text-white sm:text-7xl text-5xl">About Awadh Vilas</h1>
+        <div className="w-full flex flex-col items-center justify-center h-[35vh] max-w-[1320px] m-auto py-4 px-2">
+          <h2 className="text-white sm:text-7xl text-5xl">About Awadh Vilas</h2>
           <p className="mt-8 text-2xl text-white">
             Home / <span className="text-[#D6B519]">About Awadh Vilas</span>
           </p>
@@ -59,8 +59,14 @@ export const About = () => {
             </p>
           </div>
           <div className="lg:w-[50%]">
-            <img src={aboutimg1} alt="about_section_img" className="w-full" />
-            <div className="grid sm:grid-cols-4 grid-cols-2 gap-3 mt-8">
+            <img
+              src={aboutimg1}
+              loading="lazy"
+              decoding="async"
+              alt=""
+              className="w-full"
+            />
+            <div className="grid sm:grid-cols-4 grid-cols-2 gap-5 mt-8">
               <div className="detail_card">
                 <span className="flex gap-2">
                   <Number n={80} />+

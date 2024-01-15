@@ -68,10 +68,10 @@ function ChooseUs() {
         }}
       >
         <div className="bg-black/70 w-[100%] h-[100%]">
-          <div className="xl:py-28 lg:py-12 md:py-8">
+          <div className="xl:py-28 lg:py-12 md:py-8 py-3">
             <div className="max-w-[1320px] m-auto p-2 flex flex-col items-center justify-center ">
               <div className="">
-                <h2 className="text-center lg:text-7xl md:text-6xl text-5xl capitalize text-yellow-800 font-semibold font-fl-BSC">
+                <h2 className="text-center tracking-widest lg:text-7xl md:text-6xl text-5xl capitalize text-yellow-800 font-semibold font-fl-BSC">
                   why choose us
                 </h2>
               </div>
@@ -103,6 +103,8 @@ function ChooseUs() {
                   <img
                     src={Temple1}
                     alt="temple"
+                    loading="lazy"
+                    decoding="async"
                     className="max-h-[390px] max-w[100%]"
                   />
                 </div>

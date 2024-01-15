@@ -381,8 +381,14 @@ export const Resturant = () => {
           <div className="right xl:w-[40%] lg:w-[50%] grid grid-cols-2 gap-4 ">
             {restaurantImage.map((i, index) => {
               return (
-                <div key={index}>
-                  <img src={i.img} alt={i.title} className="rounded-lg" />
+                <div>
+                  <img
+                    src={i.img}
+                    loading="lazy"
+                    decoding="async"
+                    className="rounded-lg"
+                    alt={i.title}
+                  />
                 </div>
               );
             })}

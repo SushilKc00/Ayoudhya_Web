@@ -22,38 +22,66 @@ export const Contact = () => {
       title: `address`,
       description: `PNB Road Near Maniramdas Chhawani Chhoti Chhawani Ayodhya, Uttar Pradesh 224123`,
       icon: <CiLocationOn />,
+      iconTitle: "location",
     },
     {
       title: `email`,
       description: `contact@hotelawadhvilasayodhya.com`,
       icon: <AiOutlineMail />,
+      iconTitle: "email",
     },
     {
       title: `web`,
       description: `hotelawadhvilasayodhya.com`,
       icon: <IoLinkSharp />,
+      iconTitle: "web-link",
     },
-    { title: `phone`, description: `+91 9120053008`, icon: <AiOutlinePhone /> },
+    {
+      title: `phone`,
+      description: `+91 9120053008`,
+      icon: <AiOutlinePhone />,
+      iconTitle: "phone-number",
+    },
   ];
 
   const social = [
-    { icon: <FaFacebookF />, link: "#", title: "facebook" },
-    { icon: <FaInstagram />, link: "#", title: "instagram" },
-    { icon: <CiLinkedin />, link: "#", title: "linkedin" },
-    { icon: <FaTwitter />, link: "#", title: "twitter" },
+    {
+      icon: <FaFacebookF />,
+      link: "#",
+      title: "facebook",
+      class: "text-[#3b5998] hover:text-gray-100 hover:bg-[#3B5998]",
+    },
+    {
+      icon: <FaInstagram />,
+      link: "#",
+      title: "instagram",
+      class: "text-[#125688] hover:text-gray-100 hover:bg-[#125688]",
+    },
+    {
+      icon: <FaTwitter />,
+      link: "#",
+      title: "twitter",
+      class: "text-[#4099FF] hover:text-gray-100 hover:bg-[#4099FF]",
+    },
+    {
+      icon: <CiLinkedin />,
+      link: "#",
+      title: "linkedin",
+      class: "text-[#007bb6] hover:text-gray-100 hover:bg-[#007BB6]",
+    },
   ];
   useScrollTop();
   return (
     <div className="bg-gray-200 contact-page">
       <Header Color="bg-white" />
       <main>
-        <section className="map max-w-[1320px] m-auto">
+        <section className="map">
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56987.86494284062!2d82.12938176192195!3d26.78450689100897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a07c51f070563%3A0xd8fde853fd57cbe3!2sAyodhya%20Hotal!5e0!3m2!1sen!2sin!4v1704871639502!5m2!1sen!2sin"
-              // width={100}
-              height={400}
-              style={{ border: 0, width: "100%" }}
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d455835.34705558006!2d82.21026!3d26.801325!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a0733f0f70f8b%3A0xcaec4df444ccc7f2!2sHotel%20Awadh%20Vilas!5e0!3m2!1sen!2sus!4v1705145338516!5m2!1sen!2sus"
+              width="100%"
+              height={300}
+              style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -163,8 +191,8 @@ export const Contact = () => {
                 </div>
                 <div className="mt-5 flex lg:justify-end md:justify-start lg:mr-2">
                   <button
-                    className="py-3 lg:w-max w-[100%] md:w-max px-6 justify-center uppercase text-lg font-semibold btn_bg_color text-white active:scale-90 hover:bg-[#d5b872] flex items-center gap-2 contect-btn"
-                    onClick={() => {
+                    className="py-3 lg:w-max w-[100%] md:w-max px-6 justify-center uppercase text-lg font-semibold text-white active:scale-95 bg-[#deb666] hover:bg-[#B69854] flex items-center gap-2 contect-btn"
+                    onClick={(event) => {
                       event.preventDefault();
                     }}
                   >
@@ -187,6 +215,7 @@ export const Contact = () => {
                   title={item.title}
                   description={item.description}
                   icon={item.icon}
+                  iconTitle={item.iconTitle}
                 />
               ))}
               <div className="social-icon flex mt-4">
@@ -194,7 +223,7 @@ export const Contact = () => {
                   <Link
                     to={item.link}
                     key={i}
-                    className="rounded-se-sm flex items-center justify-center text-3xl leading-10 m-1 bg-white border border-solid border-slate-300 h-14 w-14 text-blue-700 hover:text-gray-100 hover:bg-blue-700"
+                    className={`rounded-se-sm flex items-center justify-center text-3xl leading-10 m-1 bg-white border border-solid border-[#125688] h-14 w-14 ${item.class}`}
                   >
                     <span className="sr-only">{item.title}</span>
                     {item.icon}

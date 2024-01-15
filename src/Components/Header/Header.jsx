@@ -54,6 +54,10 @@ export const Header = ({ Color }) => {
             <img
               src={headerLogo}
               alt="header_logo"
+              loading="lazy"
+              decoding="async"
+              width={112}
+              height={112}
               style={{ width: "7rem", height: "7rem" }}
             />
           </div>

@@ -6,6 +6,8 @@ export const MenuCard = ({ menuDetails }) => {
       <div className="left md:w-[35%] w-[100%]">
         <img
           src={menuDetails.image}
+          loading="lazy"
+          decoding="async"
           alt={`${menuDetails.name}-img`}
           className="h-full  w-full"
         />

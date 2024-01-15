@@ -7,7 +7,7 @@ import Room2 from "../../assets/singleroom2.jpg";
 import Room3 from "../../assets/singleroom3.jpg";
 import { MdOutlineCurrencyRupee } from "react-icons/md";
 import BgImg from "../../assets/bg-img/Home-About-BG-Jim-Fahad-Digital.jpg";
-
+import { GrLink } from "react-icons/gr";
 import { GiCoffeeCup } from "react-icons/gi";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import { FaWifi } from "react-icons/fa";
@@ -32,10 +32,10 @@ export const Rooms = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
       icons: [
-        { icon: <GiCoffeeCup /> },
-        { icon: <GiForkKnifeSpoon /> },
-        { icon: <FaWifi /> },
-        { icon: <FaDesktop /> },
+        { icon: <GiCoffeeCup />, iconTitle: "breakfast" },
+        { icon: <GiForkKnifeSpoon />, iconTitle: "restaurant" },
+        { icon: <FaWifi />, iconTitle: "free wifi" },
+        { icon: <FaDesktop />, iconTitle: "plasma tv with cable channel" },
       ],
       price: "189,00",
       time: "per night",
@@ -46,10 +46,10 @@ export const Rooms = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
       icons: [
-        { icon: <GiCoffeeCup /> },
-        { icon: <GiForkKnifeSpoon /> },
-        { icon: <FaWifi /> },
-        { icon: <FaDesktop /> },
+        { icon: <GiCoffeeCup />, iconTitle: "breakfast" },
+        { icon: <GiForkKnifeSpoon />, iconTitle: "restaurant" },
+        { icon: <FaWifi />, iconTitle: "free wifi" },
+        { icon: <FaDesktop />, iconTitle: "plasma tv with cable channel" },
       ],
       price: "219,00",
       time: "per night",
@@ -60,10 +60,10 @@ export const Rooms = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.",
       icons: [
-        { icon: <GiCoffeeCup /> },
-        { icon: <GiForkKnifeSpoon /> },
-        { icon: <FaWifi /> },
-        { icon: <FaDesktop /> },
+        { icon: <GiCoffeeCup />, iconTitle: "breakfast" },
+        { icon: <GiForkKnifeSpoon />, iconTitle: "restaurant" },
+        { icon: <FaWifi />, iconTitle: "free wifi" },
+        { icon: <FaDesktop />, iconTitle: "plasma tv with cable channel" },
       ],
       price: "219,00",
       time: "per night",
@@ -111,56 +111,65 @@ export const Rooms = () => {
         }}
       >
         {roomCardData.map((item, i) => (
-          <Link to="#">
-            <div
-              className="max-w-[1320px] h-max m-auto lg:flex mb-5 shadow-xl px-2  py-2 lg:py-0"
-              key={i}
-            >
-              <div className="overflow-hidden lg:pb-3 lg:pe-3 lg:w-[50%] flex items-center justify-center md:w-[100%]">
-                <img
-                  src={item.url}
-                  alt={item.title}
-                  className="hover:scale-110 duration-1000"
-                />
-              </div>
-              <div className="lg:flex md:flex xl:h[47vh]">
-                <div className="flex flex-col items-start lg:justify-between h-[100%] lg:w-[75%] md:w-[75%] gap-3 px-2 lg:py-4 md:py-2 py-2">
-                  <div className="">
-                    <h3 className="lg:text-6xl lg:text-left md:text-center text-center md:text-5xl text-3xl text-slate-600 font-normal mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-2xl lg:text-left md:text-center text-center  text-gray-400 font-normal">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="flex items-center w-[100%] lg:justify-start md:justify-center justify-center gap-5">
-                    {item.icons.map((item, i) => (
-                      <div
-                        className="service-Icon btn_bg_color text-4xl py-2 px-4 text-white rounded-md"
-                        key={i}
-                      >
-                        {item.icon}
-                      </div>
-                    ))}
-                  </div>
+          <Link
+            to="#"
+            className="max-w-[1320px] h-max m-auto lg:flex mb-5 shadow-xl px-2  py-2 lg:py-0"
+            key={i}
+          >
+            <picture className="overflow-hidden lg:pb-3 lg:pe-3 lg:w-[50%] bg-[#F5F5F5] flex items-center justify-center md:w-[100%]">
+              <img
+                src={item.url}
+                alt={item.title}
+                className="hover:scale-110 duration-1000"
+              />
+              {/* <div className="over-layer-icon absolute w-[100%] h-[100%] top-0 left-0 bg-[hsla(178, 100%, 50%, 0.5)] hover:block duration-1000">
+                <GrLink className="absolute top-[50%] left-[50%] transform:translate-[-50%,-50%]"/>
+                </div> */}
+            </picture>
+            <div className="lg:flex md:flex xl:h[47vh]">
+              <div className="flex flex-col items-start bg-[#F5F5F5] lg:justify-between h-[100%] lg:w-[75%] md:w-[75%] gap-3 px-2 lg:py-4 md:py-2 py-2">
+                <div className="">
+                  <h2 className="lg:text-6xl lg:text-left md:text-center text-center md:text-5xl text-3xl text-[#606060] font-normal mb-3">
+                    {item.title}
+                  </h2>
+                  <p className="text-2xl text-justify  text-[#858a99] font-normal">
+                    {item.description}
+                  </p>
                 </div>
-                <div className="flex flex-col items-center justify-between lg:w-[25%] md:w-[25%] px-2 lg:py-5 md:py-2 py-2 ">
-                  <div>
-                    <p className="room-price text-4xl text-slate-600 lg:mb-8 md:mb-8 mb-4 flex items-center gap-1 p-2">
-                      <span className="sr-only">room price</span>
-                      <MdOutlineCurrencyRupee className="text-4xl" />
-                      {item.price}
-                    </p>
-                    <p className="uppercase text-3xl p-3">{item.time}</p>
-                  </div>
-                  <div className="mt-2 lg:mt-0 md:mt-0 w-[100%] text-center">
-                    <Link
-                      to=""
-                      className="uppercase py-2 px-10 text-3xl btn_bg_color text-white active:scale-90 hover:bg-[#d5b872]"
+                <div className="flex items-center w-[100%] lg:justify-start md:justify-center justify-center gap-5">
+                  {item.icons.map((item, i) => (
+                    <div
+                      className="group service-Icon text-4xl py-2 px-4 text-white rounded-md bg-[#deb666] hover:bg-[#B69854]"
+                      key={i}
                     >
-                      book now
-                    </Link>
-                  </div>
+                      <span className="sr-only">{item.iconTitle}</span>
+                      <span>{item.icon}</span>
+                      <div className="absolute top-0 left-0 z-[1060] p-[1px] font-normal max-w-[276px] hidden group-hover:block opacity-0 hover:opacity-100 text-[#8a959e]">
+                        <h3>{item.iconTitle}</h3>
+                        <div>{item.iconTitle}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-between bg-[#EEEEEE] lg:w-[25%] md:w-[25%] px-2 lg:py-5 md:py-2 py-2 ">
+                <div>
+                  <p className="room-price text-5xl text-[#606060] lg:mb-8 md:mb-8 mb-4 flex items-center gap-1 p-2">
+                    <span className="sr-only">room price</span>
+                    <MdOutlineCurrencyRupee className="text-4xl" />
+                    {item.price}
+                  </p>
+                  <p className="uppercase text-center text-3xl text-[#858a99] p-3  ">
+                    {item.time}
+                  </p>
+                </div>
+                <div className="mt-2 lg:mt-0 md:mt-0 w-[100%] h-max text-center">
+                  <Link
+                    to=""
+                    className="uppercase py-2 px-10 text-3xl text-white bg-[#deb666] hover:bg-[#B69854] active:scale-95"
+                  >
+                    book now
+                  </Link>
                 </div>
               </div>
             </div>

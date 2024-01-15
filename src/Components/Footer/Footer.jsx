@@ -10,7 +10,13 @@ export const Footer = () => {
     <footer>
       <div className="upper_footer max-w-[1320px] m-auto py-4 px-2">
         <div>
-          <img src={logo} alt="footer_logo" width={100} />
+          <img
+            src={logo}
+            loading="lazy"
+            decoding="async"
+            alt="footer_logo"
+            width={100}
+          />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
             repudiandae quisquam veritatis labore obcaecati in. Aliquam hic
