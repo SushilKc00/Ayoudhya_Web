@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Header } from "../../Components/Header/Header";
 import { CiStar } from "react-icons/ci";
 import { BsCheck2Square } from "react-icons/bs";
+import { AiOutlineMail } from "react-icons/ai";
 import { CiLocationOn } from "react-icons/ci";
 import { GiRotaryPhone } from "react-icons/gi";
 import { FaRegCirclePlay } from "react-icons/fa6";
