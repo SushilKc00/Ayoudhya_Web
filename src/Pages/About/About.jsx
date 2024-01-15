@@ -6,6 +6,8 @@ import aboutBackgroundImage from "../../assets/aboutback.jpg";
 import Number from "../../Components/Number";
 import FacilitiesCardComponent from "../../Components/Common-components/FacilitiesCardComponent";
 import ChooseUs from "../../Components/Common-components/ChooseUs";
+import awadhvilasvideo from "../../assets/hotelawadhvilasayodhya.mp4"
+
 
 export const About = () => {
   useScrollTop();
@@ -59,11 +61,10 @@ export const About = () => {
             </p>
           </div>
           <div className="lg:w-[50%]">
-            <img
-              src={aboutimg1}
-              loading="lazy"
-              decoding="async"
-              alt=""
+            <video
+              src={awadhvilasvideo}
+               autoPlay
+               controls
               className="w-full"
             />
             <div className="grid sm:grid-cols-4 grid-cols-2 gap-5 mt-8">

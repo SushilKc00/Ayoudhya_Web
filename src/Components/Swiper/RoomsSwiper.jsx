@@ -89,7 +89,7 @@ export default function RoomsSwiper({ images }) {
         ))}
       </Swiper>
       {previewImage && (
-        <div className="fixed top-0 left-0 w-[100%] h-[100vh] bg-[#000000c6] z-30 flex flex-col justify-center items-center">
+        <div className="fixed top-0 left-0 w-[100%] h-[100vh] bg-[#000000c6] z-10 flex flex-col justify-center items-center">
           <div className="relative bg-green-500 w-[80%] m-auto">
             <img
               src={images[imgIndex]}

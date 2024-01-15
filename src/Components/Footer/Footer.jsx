@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Nav_Links from "../Header/NavLinks";
 import logo from "../../assets/HeaderLogo.png";
 import { FaFacebookF, FaLinkedin } from "react-icons/fa";
-import { AiOutlineTwitter, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineTwitter, AiOutlineMail,AiOutlineWhatsApp } from "react-icons/ai";
 
 export const Footer = () => {
   return (
@@ -99,6 +99,11 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="fixed bottom-16 left-12 w-[60px] h-[60px] bg-green-600 flex items-center justify-center rounded-full z-30 text-white">
+        <Link to="https://web.whatsapp.com/send?phone=919120053008&text=Hello!%20I%20have%20visited%20your%20site%20https://hotelawadhvilasayodhya.com/.%20I%20want%20to%20book%20a%20room." target="_blank">
+           <AiOutlineWhatsApp size={40} />
+        </Link>
       </div>
     </footer>
   );

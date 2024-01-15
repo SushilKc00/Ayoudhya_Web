@@ -13,12 +13,16 @@ import temple1 from "../../assets/temple1.png";
 import temple2 from "../../assets/temple2.png";
 import temple3 from "../../assets/temple3.png";
 import temple4 from "../../assets/temple4.png";
-import roomimg1 from "../../assets/roomimg1.png";
+import ClassicRoom from "../../assets/asset-5.jpeg";
+import DeluxeRoom from "../../assets/asset-6.jpeg";
+import BedRoom3 from "../../assets/asset-14.jpeg";
+import SuiteRoom from "../../assets/asset-8.jpeg" ;
 import newsimg1 from "../../assets/newsimg1.png";
 import { ServiceSwiper } from "../../Components/Swiper/ServiceSwiper";
 import useScrollTop from "../../Components/useScrollTop";
 import ayodhyaBackgrounImg from "../../assets/ayodhya.png";
 import videoImg from "../../assets/videoimg.jpg";
+import awadhvilasvideo from "../../assets/hotelawadhvilasayodhya.mp4"
 import { BookForm } from "../../Components/BookForm/BookForm";
 
 const templeImages = [
@@ -42,21 +46,22 @@ const templeImages = [
 
 const roomImages = [
   {
-    img: roomimg1,
-    roomType: "Single Room",
+    img: ClassicRoom,
+    roomType: "Classic Room",
   },
   {
-    img: roomimg1,
-    roomType: "Double Room",
+    img: DeluxeRoom,
+    roomType: "Deluxe Room",
   },
   {
-    img: roomimg1,
-    roomType: "Single Room",
+    img: BedRoom3,
+    roomType: "3 Bed Room",
   },
   {
-    img: roomimg1,
-    roomType: "Single Room",
+    img: SuiteRoom,
+    roomType: "Suite Room",
   },
+
 ];
 
 const newsImgages = [
@@ -251,23 +256,26 @@ export const Home = () => {
           </div>
           {playVideo && (
             <div className="video_container">
-              <h2
-                className="text-white text-5xl cursor-pointer text-end py-3"
+             
+              <div className="h-[100%]">
+                <video
+                  src={awadhvilasvideo}
+                  autoPlay
+                  controls
+                >
+                  
+                </video>
+              </div>
+            </div>
+          )}
+         {playVideo && <button
+                className="text-white text-2xl cursor-pointer text-end py-3"
                 onClick={() => {
                   SetPlayVideo(false);
                 }}
               >
                 X
-              </h2>
-              <div className="h-[100%]">
-                <video
-                  src="https://hotelawadhvilasayodhya.com/wp-content/uploads/2023/04/hotelawadhvilasayodhya.mp4"
-                  autoPlay
-                  controls
-                ></video>
-              </div>
-            </div>
-          )}
+              </button>} 
         </div>
       </section>
 

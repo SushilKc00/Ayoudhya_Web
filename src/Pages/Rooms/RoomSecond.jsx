@@ -86,28 +86,14 @@ export const RoomSecond = () => {
         </div>
       </div>
 
-      <div className="max-w-[1320px] m-auto flex md:flex-row flex-col px-2 py-[8rem] room_another_container gap-6">
+      <div className="max-w-[1320px] m-auto flex md:flex-row flex-col px-2 py-[8rem]       room_another_container gap-6">
         <div className="lg:w-[70%] w-[100%]">
           <div className="swiper_area">
             <RoomsSwiper images={roomPreviewImages} />
-            {/* <div className="flex gap-10 my-8">
-              {roomImages.map((i) => (
-                <div>
-                  <img
-                    src={i.img}
-                    loading="lazy"
-              decoding="async"
-                    alt=""
-                    style={{
-                      height: "80px",
-                    }}
-                  />
-                </div>
-              ))}
-            </div> */}
+            {/* <div className="h-[300px] bg-green-600"></div> */}
           </div>
 
-          <div className="about_hotel mt-24">
+          <div className="about_hotel">
             <h2 className="text-6xl">About Hotel Awadh Vilas</h2>
             <p className="text-gray-600 md:text-[1.5rem] mt-8 text-xl py-2 text-justify">
               Awadh Vilas is a heritage hotel located in Ayodhya, a city in the
@@ -160,7 +146,7 @@ export const RoomSecond = () => {
             <h2 className="text-5xl tracking-[0.1rem] uppercase font-semibold">
               Similar Rooms
             </h2>
-            <div className="flex lg:flex-row flex-col gap-5 mt-20 relative z-[-1]">
+            <div className="flex lg:flex-row flex-col gap-5 mt-20">
               {roomImages.map((d) => (
                 <RoomsCards roomDetails={d} />
               ))}
